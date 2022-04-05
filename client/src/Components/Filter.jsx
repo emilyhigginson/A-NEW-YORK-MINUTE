@@ -3,7 +3,9 @@ import FilterCard from './FilterCard';
 import Select from 'react-select'
 import MyTimer from './MyTimer'
 
-function Filter({spotArray, setCategoryInput, setLocationInput, setPriceInput, handleSubmit}) {
+function Filter(
+  {setCategoryInput, setLocationInput, setPriceInput, handleSubmit}) {
+
 
     const categoryOptions = [
         { value: "Down for Anything", label: "Down for Anything" },
@@ -31,6 +33,10 @@ function Filter({spotArray, setCategoryInput, setLocationInput, setPriceInput, h
         {value: "$$$$$ (go hard or go home)", label: "$$$$$ (go hard or go home)"}
     ]
 
+    function handleSubmit(event){
+      event.preventDefault();
+    }
+
       function handleCategoryChange(event){
           setCategoryInput(event.value)
       }
@@ -41,10 +47,6 @@ function Filter({spotArray, setCategoryInput, setLocationInput, setPriceInput, h
       function handlePriceChange(event){
           setPriceInput(event.value)
         }
-
-
-        
-        const spots = spotArray.map(spot=> <FilterCard key={spot.id} name={spot.name} location={spot.location} category={spot.category} price={spot.price_range} walkin={spot.walk_in} image={spot.image}/>)
 
   return (
     <div>
@@ -74,7 +76,6 @@ function Filter({spotArray, setCategoryInput, setLocationInput, setPriceInput, h
         />
         </form>
         {/* Display spot cards here */}
-        {spots}
     </div>
   )
 }

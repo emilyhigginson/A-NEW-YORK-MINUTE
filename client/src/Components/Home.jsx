@@ -1,10 +1,11 @@
 import React from 'react'
 
 function Home() {
+
   return (
     <div>
         <h1>SO MUCH TO DO, SO LITTLE TIME.</h1>
-        <div>
+        <div >
         <img  style={{"width": "300px"}} src='https://previews.123rf.com/images/hchjjl/hchjjl1503/hchjjl150301916/37316845-taxi-doodle-drawing.jpg'></img>
         <h3> Ready to go? <br>
         </br>Click to find something to do ASAP. </h3>

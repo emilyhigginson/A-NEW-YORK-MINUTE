@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import Select from 'react-select'
+import ReviewForm from './ReviewForm'
 
-function NewSpotForm() {
+function NewSpotForm({onFormSubmit}) {
   const [name, setName] = useState("")
   const [image, setImage] = useState("")
   const [location, setLocation] = useState("")
@@ -12,10 +14,51 @@ function NewSpotForm() {
     const newSpot = {
       name, image, location, category, price, walkin
     }
+    event.preventDefault();
+    fetch("/spots", {
+      method: "POST", 
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newSpot),
+    })
+    .then((response) => response.json())
+    .then(item => console.log(item))
+    .then((data) => onFormSubmit(data));
   }
 
-  
 
+
+  const categoryOptions = [
+    { value: "Food & Drink", label: "Food & Drink" },
+    { value: "Activity", label: "Activity" },
+    { value: "Fitness", label: "Fitness" },
+    { value: "Touristy", label: "Touristy" }
+  ];
+
+const locationOptions = [
+    { value: "Chelsea", label: "Chelsea"},
+    {value: "East Village", label: "East Village"},
+    {value: "Flatiron", label: "Flatiron"},
+    {value: "Gramercy", label: "Gramercy"},
+    {value: "Midtown", label: "Midtown"},
+    {value: "Times Square", label: "Times Square"},
+    {value: "West Village", label: "West Village"}
+]
+
+const priceOptions = [
+    {value: "$ (no cost)", label: "$ (no cost)"},
+    {value: "$$", label: "$$"},
+    {value: "$$$", label: "$$$"},
+    {value: "$$$$", label: "$$$$"},
+    {value: "$$$$$ (go hard or go home)", label: "$$$$$ (go hard or go home)"}
+]
+
+  const walkinOptions = [
+    {value: false, label: "yes"},
+    {value: true, label: "no"},
+  ]
+  
   return (
     <div>
       <h1>No Gatekeeping Here!
@@ -40,58 +83,33 @@ function NewSpotForm() {
 
         <label>Select Category</label>
         <br></br>
-        <select
-          onChange={(e) => setCategory(e.target.value)}
-          value={category}
-          name="category"
-          id="select1"
-        >
-          <option value="Select">Select</option>
-          <option value="Food & Drink ">Food & Drink</option>
-          <option value="Activity">Activity</option>
-          <option value="Fitness">Fitness</option>
-          <option value="Tourism">Tourism</option>
-        </select>
+        <Select
+          onChange={(e) => setCategory(e.value)}
+          options={categoryOptions}
+          placeholder="What best describes this spot?"
+          >
+        </Select>
         <label> Where is this located? </label>
         <br></br>
-        <select
-          onChange={(e) => setLocation(e.target.value)}
-          value={location}
-          name="location"
-        >
-          <option value="Select">Select</option>
-          <option value="Chelsea"> Chelsea </option>
-          <option value="East Village"> East Village </option>
-          <option value="Flatiron">Flatiron</option>
-          <option value="Midtown">Midtown</option>
-          <option value="Times Square">Times Square</option>
-          <option value="West Village">West Village</option>
-        </select>
+          <Select
+          options={locationOptions}
+          placeholder="Choose a neighborhood"
+          onChange={(e) => setLocation(e.value)}
+          />
         <label> Pricepoint? </label>
         <br></br>
-        <select
-          onChange={(e) => setPrice(e.target.value)}
-          value={price}
-          name="price"
-        >
-          <option value="Select">Select</option>
-          <option value="$"> $ </option>
-          <option value="$$"> $$ </option>
-          <option value="$$$">$$$</option>
-          <option value="$$$$">$$$$</option>
-          <option value="$$$$$">$$$$$</option>
-        </select>
+      <Select
+        options={priceOptions}
+        placeholder="Name a price"
+        onChange={(e) => setPrice(e.value)}
+        />
         <label> Do you need a reservation/appointment? </label>
         <br></br>
-        <select
-          onChange={(e) => setWalkin(e.target.value)}
-          value={walkin}
-          name="walkin"
-        >
-          <option value="Select">Select</option>
-          <option value="true"> yes </option>
-          <option value="false"> no </option>
-        </select>
+        <Select
+          onChange={(e) => setWalkin(e.value)}
+          options={walkinOptions}
+        />
+        <ReviewForm/>
         <button 
         type="submit"
         name="submit"
