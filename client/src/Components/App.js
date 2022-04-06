@@ -26,6 +26,7 @@ useEffect(()=> {
  }, []);
 
 
+
 function onFormSubmit(newSpot) {
   setSpotArray([newSpot, ...spotArray])
 }
@@ -40,7 +41,7 @@ useEffect(()=> {
    <AllSpots onFormSubmit={onFormSubmit} spotArray={spotArray} user={user}/>
    <Login onLogin={setUser}/>
    <Home/>
-   <Profile user={user} spotArray={spotArray} onFormSubmit={onFormSubmit}/>
+   <Profile user={user} spotArray={spotArray} onFormSubmit={onFormSubmit} />
    <Find
   //  setCategoryInput={setCategoryInput}
   //  setLocationInput={setLocationInput}

@@ -3,11 +3,11 @@ import SavedSpots from './SavedSpots'
 import VisitedSpots from './VisitedSpots'
 import NewSpotForm from './NewSpotForm'
 
-function Profile({user, spotArray, onFormSubmit}) {
+function Profile({user, spotArray, onFormSubmit, handleDelete}) {
   return (
     <div>
       <h1>Welcome back, user! </h1>
-<SavedSpots/>
+<SavedSpots spotArray={spotArray} user={user} handleDelete={handleDelete}/>
 <VisitedSpots spotArray={spotArray} user={user} />
 <NewSpotForm onFormSubmit={onFormSubmit}/>
 

@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import {useParams} from 'react-router-dom'
 
-function SavedCard({name, location, category, walkin, image, price}) {
+
+function SavedCard({handleDelete, name, location, category, image, price, walkin}) {
+
+
     return (
       <div>
           <h1>{name}</h1>
@@ -9,7 +13,7 @@ function SavedCard({name, location, category, walkin, image, price}) {
           <h3>{location}</h3>
           <p>{price}</p>
           <p> Walk-ins welcome? {walkin ? "yes" : "no"}</p>
-          <button> ★ </button>
+          <button onClick={handleDelete}> Unsave this Spot </button>
           <button> </button>
       </div>
     )

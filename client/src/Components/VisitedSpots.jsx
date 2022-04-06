@@ -2,7 +2,8 @@ import React from 'react'
 
 function VisitedSpots({user, spotArray}) {
 
-  const mySpots = spotArray.filter((spot) => console.log(spot.reviews))
+  const mySpots = spotArray.filter((spot) => 
+  console.log(spot.reviews))
 
   // console.log(mySpots)
   return (

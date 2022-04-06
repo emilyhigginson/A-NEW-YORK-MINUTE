@@ -1,7 +1,7 @@
 class FavoritesController < ApplicationController
 
     def index 
-        favorites = Favorite.where(user_id: params[:user_id])
+        favorites = Favorite.all
         render json: favorites
     end
 
@@ -14,10 +14,13 @@ class FavoritesController < ApplicationController
         end
       end
 
-    #   def destroy
-    #     Favorite.where(favorited_id: @spot.id, user_id: current_user.id).first.destroy
-    #     redirect_to @spot, notice: 'Spot unfavorited.'
-    #   end
+    def destroy 
+    favorite = Favorite.find(params[:id])
+    favorite.destroy 
+
+    head :no_content
+
+end
 
       private 
       def favorite_params 
