@@ -15,10 +15,6 @@ function Home() {
         <h3> Not heading out just yet? <br>
         </br>Login / sign up to start curating your next outing. </h3>
         </div>
-
-        
-
-
     </div>
   )
 }

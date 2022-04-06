@@ -7,7 +7,6 @@ function Login({onLogin}) {
   const [showForm, setShowForm] = useState(false);
   const [error, setError] = useState([])
 
-
 function toggleSignup() {
   setShowForm((showForm) => !showForm);
 }

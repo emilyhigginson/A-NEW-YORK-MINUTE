@@ -5,8 +5,6 @@ function ReviewForm({user, spot_id}) {
 
     const [comment, setComment] = useState("")
     const { currentUser } = useContext(UserContext)
-    // const user_id = currentUser?.id
-
 
     function handleSubmit(event){
         const review = {

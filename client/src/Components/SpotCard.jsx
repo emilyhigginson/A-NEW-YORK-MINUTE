@@ -25,9 +25,7 @@ const [isClicked, setIsClicked] = useState(false)
    })
    .then((response) => response.json())
    .then(favorite => console.log(favorite))
-
  }
-
 
   return (
     <div>

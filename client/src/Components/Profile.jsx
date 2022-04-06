@@ -10,8 +10,6 @@ function Profile({user, spotArray, onFormSubmit, handleDelete}) {
 <SavedSpots spotArray={spotArray} user={user} handleDelete={handleDelete}/>
 <VisitedSpots spotArray={spotArray} user={user} />
 <NewSpotForm onFormSubmit={onFormSubmit}/>
-
-
     </div>
   )
 }

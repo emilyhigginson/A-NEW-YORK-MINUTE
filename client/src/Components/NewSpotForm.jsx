@@ -27,8 +27,6 @@ function NewSpotForm({onFormSubmit}) {
     .then((data) => onFormSubmit(data));
   }
 
-
-
   const categoryOptions = [
     { value: "Food & Drink", label: "Food & Drink" },
     { value: "Activity", label: "Activity" },

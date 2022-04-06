@@ -1,11 +1,9 @@
 import React, {Component} from 'react'
-import FilterCard from './FilterCard';
 import Select from 'react-select'
 import MyTimer from './MyTimer'
 
 function Filter(
   {setCategoryInput, setLocationInput, setPriceInput, handleSubmit}) {
-
 
     const categoryOptions = [
         { value: "Down for Anything", label: "Down for Anything" },
@@ -75,7 +73,6 @@ function Filter(
         onChange={handlePriceChange}
         />
         </form>
-        {/* Display spot cards here */}
     </div>
   )
 }

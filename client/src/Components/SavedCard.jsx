@@ -4,7 +4,6 @@ import {useParams} from 'react-router-dom'
 
 function SavedCard({handleDelete, name, location, category, image, price, walkin}) {
 
-
     return (
       <div>
           <h1>{name}</h1>
