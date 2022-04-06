@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import ReviewForm from './ReviewForm'
 
 
-function SpotCard({name, location, category, walkin, image, price}) {
+function SpotCard({name, location, category, walkin, image, price, user, id}) {
 const [formIsShowing, setFormIsShowing] = useState(true)
  // add to favorites 
 
@@ -20,7 +20,7 @@ const [formIsShowing, setFormIsShowing] = useState(true)
         <p> Walk-ins welcome? {walkin ? "yes" : "no"}</p>
         {/* <button> {isClicked ?  "★" : "☆"}  </button> */}
         <button onClick={toggleReviewForm}> Write a Review </button>
-        {formIsShowing ? null : <ReviewForm/>}
+        {formIsShowing ? null : <ReviewForm spot_id={id} user={user}/>}
     </div>
   )
 }

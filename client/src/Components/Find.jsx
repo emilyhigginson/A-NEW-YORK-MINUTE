@@ -8,8 +8,8 @@ function Find({spotArray}) {
     const [priceInput, setPriceInput] =useState(0)
 
 
-    const filterByCategory = spotArray.filter((spot) =>
-      spot.category.toLowerCase().includes(categoryInput.toLowerCase())
+    const filterByCategory = spotArray.filter((spot) => console.log(spot)
+    //   spot.category.toLowerCase().includes(categoryInput.toLowerCase())
     );
 
     const filterByLocation = filterByCategory.filter((spot) =>

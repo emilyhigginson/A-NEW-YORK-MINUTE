@@ -1,19 +1,18 @@
 import React, {useState, useContext} from 'react'
 import { UserContext } from "./UserContext"
 
-function ReviewForm() {
+function ReviewForm({user, spot_id}) {
 
     const [comment, setComment] = useState("")
     const { currentUser } = useContext(UserContext)
-
     const user_id = currentUser?.id
 
 
     function handleSubmit(event){
         const review = {
             comment, 
-            // user_id: user_id, 
-            // spot_id: spot_id
+            user_id: user.id, 
+            spot_id: spot_id
         }
         event.preventDefault();
         fetch("/reviews", {
@@ -24,8 +23,7 @@ function ReviewForm() {
             body: JSON.stringify(review),
           })
             .then((response) => response.json())
-            debugger
-            // .then(review => console.log(review))
+            .then(review => console.log(review))
         }
     
   return (
@@ -43,7 +41,7 @@ function ReviewForm() {
  <button 
         type="submit"
         name="submit"
-        value=""> 
+       > 
         <strong>Review</strong>
     </button>
         </form>
