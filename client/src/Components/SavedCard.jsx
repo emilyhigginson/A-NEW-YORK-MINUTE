@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 
 
-function SavedCard({handleDelete, name, location, category, image, price, walkin}) {
+function SavedCard({handleDelete, id, name, location, category, image, price, walkin}) {
 
     return (
       <div>
@@ -12,7 +12,7 @@ function SavedCard({handleDelete, name, location, category, image, price, walkin
           <h3>{location}</h3>
           <p>{price}</p>
           <p> Walk-ins welcome? {walkin ? "yes" : "no"}</p>
-          <button onClick={handleDelete}> Unsave this Spot </button>
+          <button onClick={() => handleDelete(id)}> Unsave this Spot </button>
           <button> </button>
       </div>
     )

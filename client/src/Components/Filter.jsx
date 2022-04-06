@@ -14,6 +14,7 @@ function Filter(
       ];
 
     const locationOptions = [
+        {value: "All", label: "Anywhere & Everywhere"},
         { value: "Chelsea", label: "Chelsea"},
         {value: "East Village", label: "East Village"},
         {value: "Flatiron", label: "Flatiron"},
@@ -59,7 +60,7 @@ function Filter(
         onChange={handleCategoryChange}
         />
         <br></br>
-        <lable>Where do youy want to be?</lable>
+        <lable>Where do you want to be?</lable>
         <Select
         options={locationOptions}
         placeholder="Anywhere and Everywhere"

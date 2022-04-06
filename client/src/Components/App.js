@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import { Route, Switch } from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
 import Find from "./Find";
@@ -31,12 +32,30 @@ function onFormSubmit(newSpot) {
   return (
     <div className="App">
    <LandPage/>
+
+   <Switch>
+
+   <Route path='/spots'> 
    <AllSpots onFormSubmit={onFormSubmit} spotArray={spotArray} user={user}/>
+   </Route>
+
+   <Route exact path='/login'> 
    <Login onLogin={setUser}/>
-   <Home/>
+   </Route>
+
+   <Route exact path='/home'>
+   <Home />
+   </Route>
+
+   <Route exact path='/me'>
    <Profile user={user} spotArray={spotArray} onFormSubmit={onFormSubmit} />
-   <Find
-   spotArray={spotArray}/>
+   </Route>
+
+   <Route exact path ='/'>
+   <Find spotArray={spotArray}/>
+   </Route>
+
+   </Switch>
     </div>
   );
 }

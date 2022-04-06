@@ -35,7 +35,6 @@ function Signup() {
         setEmail("")
         setPassword("")
     }
-
     return (
         <>
             <div className='signUp'>

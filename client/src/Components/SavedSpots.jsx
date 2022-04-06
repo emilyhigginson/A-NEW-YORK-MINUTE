@@ -15,12 +15,18 @@ console.log(mySaved)
 
 function handleDelete(id) {
   fetch(`/favorites/${id}`, {
+    
     method: "DELETE",
+    
   }).then((r) => {
+    debugger
     if (r.ok) {
+      debugger
       setMySaved((saved) =>
+      
         saved.filter((saved) => saved.id !== id)
       );
+      debugger
     }
   });
 }

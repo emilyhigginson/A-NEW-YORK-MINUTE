@@ -5,6 +5,11 @@ class FavoritesController < ApplicationController
         render json: favorites
     end
 
+    def show 
+      favorite = Favorite.find(params[:id])
+      render json: favorite, status: :ok
+  end
+
     def create
         favorite = Favorite.create(favorite_params)
         if favorite.valid?
