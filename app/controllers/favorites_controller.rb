@@ -1,5 +1,4 @@
 class FavoritesController < ApplicationController
-    before_action :set_spot
 
     def index 
         favorites = Favorite.where(user_id: params[:user_id])
@@ -7,8 +6,11 @@ class FavoritesController < ApplicationController
     end
 
     def create
-        @spot = Spot.find(params[:spot_id])
-        like = Favorite.create(user_id: current_user.id, post_id: @spot.id)
+        favorite = Favorite.create(favorite_params)
+        if favorite.valid?
+        render json: favorite, status: :created
+        else 
+            render json: {errors: favorite.errors.full_messages}, status: :unprocessable_entity
         end
       end
 
@@ -18,7 +20,7 @@ class FavoritesController < ApplicationController
     #   end
 
       private 
-      def set_spot
-        @spot = Spot.find(params[:spot_id] || params[:id])
+      def favorite_params 
+        params.permit(:id, :user_id, :spot_id, :favorite)
       end
 end
