@@ -1,8 +1,10 @@
 import React from 'react'
+import Review from './Review'
 
-function FilterCard({name, location, category, walkin, image, price}) {
+function FilterCard({id, name, location, category, walkin, image, price, reviews}) {
 
- 
+ console.log({reviews})
+
   return (
     <div>
         <h1>{name}</h1>
@@ -11,7 +13,8 @@ function FilterCard({name, location, category, walkin, image, price}) {
         <h3>{location}</h3>
         <p>{price}</p>
         <p> Walk-ins welcome? {walkin ? "yes" : "no"}</p>
-        {/* <button> {isClicked ?  "★" : "☆"}  </button> */}
+      <Review reviews={reviews} id={id}/>
+      {/* <button> {isClicked ?  "★" : "☆"}  </button> */}
         <button> </button>
     </div>
   )
