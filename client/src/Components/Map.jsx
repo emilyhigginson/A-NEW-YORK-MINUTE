@@ -35,13 +35,11 @@ const options = {
     styles: mapstyles,
     disableDefaultUI: true,
 };
-
-// const MY_KEY = "AIzaSyAK_6JoeZNYhqwGPwLNmmqImmiWzl4lM8E"
-
+ 
 export default function Map({setLat, setLng, lat, lng}) {
 
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey : "AIzaSyAK_6JoeZNYhqwGPwLNmmqImmiWzl4lM8E",
+        googleMapsApiKey : "",
         libraries,
         
     });
