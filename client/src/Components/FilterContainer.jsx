@@ -13,8 +13,10 @@ function FilterContainer({spots}) {
   }, [])
   
   // const  review= spots.reviews.map((review) => review)
-const filteredSpots = spots.map(spot=> <FilterCard reviews={reviews} key={spot.id} id={spot.id} name={spot.name} location={spot.location} category={spot.category} price={spot.price_range} walkin={spot.walk_in} image={spot.image} /> )
-console.log(reviews)
+const filteredSpots = spots.map(spot=>
+   <FilterCard
+    reviews={reviews} 
+   key={spot.id} id={spot.id} name={spot.name} location={spot.location} category={spot.category} price={spot.price_range} walkin={spot.walk_in} image={spot.image} /> )
     return (
     <div>
         {filteredSpots}

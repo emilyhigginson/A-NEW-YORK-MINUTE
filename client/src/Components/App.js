@@ -9,6 +9,7 @@ import Profile from "./Profile";
 import LandPage from "./LandPage"
 import AllSpots from "./AllSpots";
 import Map from "./Map";
+import Header from "./Header";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -35,8 +36,8 @@ function onFormSubmit(newSpot) {
   return (
     <div className="App">
       {/* <Map/> */}
-   <LandPage/>
-
+   {/* <LandPage/> */}
+<Header/>
    <Switch>
 
    <Route path='/spots'> 

@@ -3,7 +3,6 @@ import Review from './Review'
 
 function FilterCard({id, name, location, category, walkin, image, price, reviews}) {
 
- console.log({reviews})
 
   return (
     <div>

@@ -4,6 +4,12 @@ class ReviewsController < ApplicationController
         reviews = Review.all
         render json: reviews
     end
+    
+    def show 
+        review = Review.find(params[:id])
+        render json: review, status: :ok
+    end
+
     def create 
         review = Review.create(review_params)
         if review.valid?

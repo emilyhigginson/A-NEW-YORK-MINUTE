@@ -1,8 +1,8 @@
 import React from 'react'
 
 function Review({reviews, id}) {
-//   console.log(reviews)
-  const comment = reviews.map(review => {
+  console.log(reviews)
+  const comment = reviews.map((review) => {
      
           if (review.spot_id === id) {
             return <p> {review.comment} </p> 
