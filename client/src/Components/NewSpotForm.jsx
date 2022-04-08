@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 import ReviewForm from './ReviewForm'
 import Map from './Map'
-
 function NewSpotForm({onFormSubmit}) {
   const [name, setName] = useState("")
   const [image, setImage] = useState("")
@@ -60,10 +59,11 @@ const priceOptions = [
   
   return (
     <div>
-      <Map/>
+
       <h1>No Gatekeeping Here!
         Add your favorite NYC spot so others can experience it too!
       </h1>
+      <Map/>
       <form onSubmit={handleSubmit}>
         <label> Name: </label>
         <input

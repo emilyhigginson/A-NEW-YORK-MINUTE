@@ -34,7 +34,7 @@ function onFormSubmit(newSpot) {
 
   return (
     <div className="App">
-      <Map/>
+      {/* <Map/> */}
    <LandPage/>
 
    <Switch>

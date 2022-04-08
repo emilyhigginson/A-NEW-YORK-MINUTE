@@ -1,4 +1,5 @@
 import { useLoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api'
+
 import React from 'react';
 import { formatRelative } from "date-fns"
 import usePlacesAutocomplete, {
@@ -34,7 +35,7 @@ const options = {
 
 export default function Map() {
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: "AIzaSyAK_6JoeZNYhqwGPwLNmmqImmiWzl4lM8E",
+        googleMapsApiKey: 
         libraries,
     });
 
@@ -60,7 +61,7 @@ export default function Map() {
                 zoom={14}
                 center={center}
                 onLoad={onMapLoad}
-                // onClick={}
+                // onClick={setLng}
             >
                 {/* options={options}  */}
             </GoogleMap>
