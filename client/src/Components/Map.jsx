@@ -1,6 +1,10 @@
 import { useLoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api'
 
-import React from 'react';
+import React, {useState} from 'react';
+import Select from 'react-select'
+import ReviewForm from './ReviewForm'
+
+import NewSpotForm from './NewSpotForm';
 import { formatRelative } from "date-fns"
 import usePlacesAutocomplete, {
     getGeocode,
@@ -33,9 +37,12 @@ const options = {
     disableDefaultUI: true,
 };
 
-export default function Map() {
+// const MY_KEY = "AIzaSyAK_6JoeZNYhqwGPwLNmmqImmiWzl4lM8E"
+
+export default function Map({setLat, setLng, lat, lng}) {
+
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: 
+        googleMapsApiKey : "",
         libraries,
     });
 
@@ -43,6 +50,8 @@ export default function Map() {
     const onMapLoad = React.useCallback((map) => {
         mapRef.current = map;
     }, [])
+
+    const [markers, setMarkers] = React.useState([])
 
     const panTo = React.useCallback(({ lat, lng }) => {
         console.log(lat, lng)
@@ -54,18 +63,34 @@ export default function Map() {
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading maps";
     return (
+        <>
         <div>
             <h1 className='mapHeader'> A NEW YORK MINUTE </h1>
             <Search panTo={panTo} />
+            {/* <NewSpotForm/> */}
+
             <GoogleMap mapContainerStyle={mapContainerStyle}
                 zoom={14}
                 center={center}
                 onLoad={onMapLoad}
-                // onClick={setLng}
+                onClick={(event) => {
+                    setMarkers(current => [...current, {
+                        lat: event.latLng.lat(), 
+                        lng: event.latLng.lng(),
+                    }] ); 
+                    setLat(event.latLng.lat());
+                    console.log(lat, lng) 
+                    setLng(event.latLng.lng())
+                }
+            // onClick={() => {setIsClicked(); handleClick()}}
+            }
             >
+                {markers.map(marker => <Marker key={marker.lat} position={{lat: marker.lat, lng: marker.lng}}/>)}
                 {/* options={options}  */}
             </GoogleMap>
         </div>
+        
+        </>
     )
 }
 
@@ -107,6 +132,8 @@ function Search({ panTo }) {
                     {status === "OK" && data.map(({ id, description }) => <ComboboxOption key={id} value={description} />)}
                 </ComboboxPopover>
             </Combobox>
+
         </div>
     )
-}
+                }
+    

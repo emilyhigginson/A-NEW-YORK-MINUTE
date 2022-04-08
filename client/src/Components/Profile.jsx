@@ -10,7 +10,7 @@ function Profile({user, spotArray, onFormSubmit, handleDelete}) {
       {/* <h1>Welcome back, {user}! </h1> */}
 <SavedSpots spotArray={spotArray} user={user} handleDelete={handleDelete}/>
 <VisitedSpots spotArray={spotArray} user={user} />
-<NewSpotForm onFormSubmit={onFormSubmit}/>
+{/* <NewSpotForm onFormSubmit={onFormSubmit}/> */}
     </div>
   )
 }

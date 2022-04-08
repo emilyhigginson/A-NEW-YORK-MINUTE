@@ -10,6 +10,7 @@ import LandPage from "./LandPage"
 import AllSpots from "./AllSpots";
 import Map from "./Map";
 import Header from "./Header";
+import NewSpotForm from "./NewSpotForm";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -54,6 +55,10 @@ function onFormSubmit(newSpot) {
 
    <Route exact path='/me'>
    <Profile user={user} spotArray={spotArray} onFormSubmit={onFormSubmit} />
+   </Route>
+
+   <Route exact path = '/add'>
+     <NewSpotForm onFormSubmit={onFormSubmit} />
    </Route>
 
    <Route exact path ='/'>

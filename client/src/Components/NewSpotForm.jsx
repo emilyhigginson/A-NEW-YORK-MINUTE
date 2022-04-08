@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 import ReviewForm from './ReviewForm'
 import Map from './Map'
+
 function NewSpotForm({onFormSubmit}) {
   const [name, setName] = useState("")
   const [image, setImage] = useState("")
@@ -9,7 +10,9 @@ function NewSpotForm({onFormSubmit}) {
   const [category, setCategory] = useState("")
   const [price, setPrice] = useState("")
   const [walkin, setWalkin] = useState(null)
-  
+  const [lat, setLat] = useState("")
+  const [lng, setLng] = useState("")
+
   function handleSubmit(event) {
     const newSpot = {
       name, image, location, category, price, walkin
@@ -63,7 +66,7 @@ const priceOptions = [
       <h1>No Gatekeeping Here!
         Add your favorite NYC spot so others can experience it too!
       </h1>
-      <Map/>
+      <Map setLng={setLng} setLat={setLat} />
       <form onSubmit={handleSubmit}>
         <label> Name: </label>
         <input
@@ -109,6 +112,19 @@ const priceOptions = [
           onChange={(e) => setWalkin(e.value)}
           options={walkinOptions}
         />
+        <label>Latitude:</label>
+        <input 
+          type="text"
+          name="name"
+          value={lat}>
+        </input>
+        <label>Longitude:</label>
+        <input 
+          type="text"
+          name="name"
+          value={lng}>
+
+        </input>
         <ReviewForm/>
         <button 
         type="submit"

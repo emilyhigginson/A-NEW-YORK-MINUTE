@@ -9,6 +9,8 @@ function Header() {
         <NavLink exact to='/spots'>Spots </NavLink>
         <NavLink exact to='/home'>Home </NavLink>
         <NavLink exact to='/me'>My Spots </NavLink>
+        <NavLink exact to='/add'>Add a Spot</NavLink>
+
         <NavLink exact to='/'>Search </NavLink>
         </Route>
 
