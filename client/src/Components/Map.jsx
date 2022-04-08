@@ -35,11 +35,11 @@ const options = {
     styles: mapstyles,
     disableDefaultUI: true,
 };
- 
+
+
 export default function Map({setLat, setLng, lat, lng}) {
 
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey : "",
         libraries,
         
     });

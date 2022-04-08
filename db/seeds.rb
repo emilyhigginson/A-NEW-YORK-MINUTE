@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 puts "Seeding ... "
 
 User.destroy_all
@@ -25,4 +26,13 @@ Spot.create(name: "New York Public Library", image: "https://images.unsplash.com
 
 Favorite.create(user_id: User.first.id, spot_id: Spot.first.id)
 Favorite.create(user_id: User.last.id, spot_id: Spot.last.id)
+
+20.times do
+    user_id = User.ids.sample
+    spot_id = Spot.ids.sample
+    
+    10.times do 
+      Review.create(user_id: user_id, spot_id: spot_id, comment: Faker::Restaurant.review)
+    end
+end
 puts "finished seeding!! 🏙️ 🚕 🌭 "

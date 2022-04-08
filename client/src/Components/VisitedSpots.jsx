@@ -2,10 +2,9 @@ import React from 'react'
 
 function VisitedSpots({user, spotArray}) {
 
-  const mySpots = spotArray.filter((spot) => 
-  console.log(spot.reviews))
+  const mySpots = spotArray.filter((spot) => console.log(spot.user_id))
 
-  // console.log(mySpots)
+  console.log(mySpots)
   return (
     <div>
       <h1> Spots you've visited and reviewed:  </h1>
