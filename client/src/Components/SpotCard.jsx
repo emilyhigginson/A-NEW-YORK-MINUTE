@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import ReviewForm from './ReviewForm'
-
+// import Review from './Review'
 
 function SpotCard({name, location, category, walkin, image, price, user, id, spot_id}) {
 const [formIsShowing, setFormIsShowing] = useState(true)
@@ -35,8 +35,8 @@ const [isClicked, setIsClicked] = useState(false)
         <h3>{location}</h3>
         <p>{price}</p>
         <p> Walk-ins welcome? {walkin ? "yes" : "no"}</p>
-        <p> Reviews: {}</p>
-        <button onClick={() => {setIsClicked(); handleClick()}}> {isClicked ?  "★" : "☆"}  </button>
+      {/* <Review/>             */}
+<button onClick={() => {setIsClicked(); handleClick()}}> {isClicked ?  "★" : "☆"}  </button>
         <button onClick={toggleReviewForm} > Write a Review </button>
         {formIsShowing ? null : <ReviewForm spot_id={id} user={user}/>}
     </div>

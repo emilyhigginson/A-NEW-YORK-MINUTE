@@ -1,4 +1,6 @@
+
 import React, {useEffect, useState} from "react";
+import './style.css';
 import { Route, Switch } from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
@@ -6,6 +8,7 @@ import Find from "./Find";
 import Profile from "./Profile";
 import LandPage from "./LandPage"
 import AllSpots from "./AllSpots";
+import Map from "./Map";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -31,6 +34,7 @@ function onFormSubmit(newSpot) {
 
   return (
     <div className="App">
+      <Map/>
    <LandPage/>
 
    <Switch>

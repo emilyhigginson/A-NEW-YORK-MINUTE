@@ -26,7 +26,6 @@ function ReviewForm({user, spot_id}) {
     
   return (
     <div>
-
         <form onSubmit={handleSubmit}>
         <label> Review: </label>
       <br></br>

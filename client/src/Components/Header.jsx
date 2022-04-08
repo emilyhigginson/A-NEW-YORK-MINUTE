@@ -3,7 +3,7 @@ import { NavLink, Route} from "react-router-dom"
 
 function Header() {
   return (
-    <div>
+    <div style={{ "backgroundColor": "transparent"}}>
         <Route>
         <NavLink exact to='/login'>Login </NavLink>
         <NavLink exact to='/spots'>Spots </NavLink>

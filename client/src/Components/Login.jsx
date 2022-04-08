@@ -31,10 +31,8 @@ function handleSubmit(e){
 }
   return (
     <>
-    <div>
-      <form 
-      onSubmit={handleSubmit}
-      >
+    <div className='loginDiv'>
+      <form onSubmit={handleSubmit}>
       <h1>Welcome back, login below. New user? Signup.</h1>
       <label> Email:
       <br></br>

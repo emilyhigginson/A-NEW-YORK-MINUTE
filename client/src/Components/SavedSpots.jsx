@@ -19,14 +19,12 @@ function handleDelete(id) {
     method: "DELETE",
     
   }).then((r) => {
-    debugger
     if (r.ok) {
-      debugger
       setMySaved((saved) =>
       
         saved.filter((saved) => saved.id !== id)
       );
-      debugger
+      
     }
   });
 }

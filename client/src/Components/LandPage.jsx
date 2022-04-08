@@ -17,9 +17,9 @@ export default function App() {
   return (
     <>
    
-    <div className={classes.root}>
+    <div style={{ "backgroundColor": "transparent"}} className={classes.root}>
       <Header/>
- <h1 style={{"color": "#d80032", "text-align": "center", "padding": "400px", "font-size": "50px"}}>A NEW YORK MINUTE</h1>
+ <h1 style={{"color": "#d80032", "backgroundColor": "transparent", "text-align": "center", "padding": "400px", "font-size": "50px"}}>A NEW YORK MINUTE</h1>
     </div>
     </>
   );

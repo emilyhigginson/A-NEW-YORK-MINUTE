@@ -7,7 +7,6 @@ function Find({spotArray}) {
     const [locationInput, setLocationInput] =useState("")
     const [priceInput, setPriceInput] =useState(0)
 
-
     const filterByCategory = spotArray.filter((spot) => spot.category.toLowerCase().includes(categoryInput.toLowerCase())
     );
 
@@ -23,6 +22,8 @@ function Find({spotArray}) {
 
   return (
     <div>
+      {/* <button onClick={returnRandom()}></button> */}
+      
         <Filter setCategoryInput={setCategoryInput} setLocationInput={setLocationInput} setPriceInput={setPriceInput}/>
         <FilterContainer spots={filterByLocation}/>
     </div>
