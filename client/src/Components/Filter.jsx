@@ -3,7 +3,7 @@ import Select from 'react-select'
 import MyTimer from './MyTimer'
 
 function Filter(
-  {setCategoryInput, setLocationInput, setPriceInput, handleSubmit}) {
+  {setCategoryInput, setLocationInput, setFreeInput, handleSubmit}) {
 
     const categoryOptions = [
         { value: "Down for Anything", label: "Down for Anything" },
@@ -24,12 +24,9 @@ function Filter(
         {value: "West Village", label: "West Village"}
     ]
 
-    const priceOptions = [
-        {value: "$ (no cost)", label: "$ (no cost)"},
-        {value: "$$", label: "$$"},
-        {value: "$$$", label: "$$$"},
-        {value: "$$$$", label: "$$$$"},
-        {value: "$$$$$ (go hard or go home)", label: "$$$$$ (go hard or go home)"}
+    const freeOptions = [
+        {value: "free", label: "free"},
+        {value: "$$", label: "willing to spend"},
     ]
 
     function handleSubmit(event){
@@ -43,8 +40,8 @@ function Filter(
       function handleLocationChange(event){
           setLocationInput(event.value)
     }
-      function handlePriceChange(event){
-          setPriceInput(event.value)
+      function handleFreeChange(event){
+          setFreeInput(event.value)
         }
 
   return (
@@ -69,9 +66,9 @@ function Filter(
         <br></br>
         <lable>What's the budget?</lable>
         <Select
-        options={priceOptions}
+        options={freeOptions}
         placeholder="Name a price"
-        onChange={handlePriceChange}
+        onChange={handleFreeChange}
         />
         </form>
     </div>

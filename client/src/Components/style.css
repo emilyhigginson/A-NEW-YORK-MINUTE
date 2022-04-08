@@ -6,7 +6,13 @@
     /* background-color: white; */
 
 }
-
+#searchBox{
+    margin-top: 30px;
+    padding: 10px;
+    width: 40%;
+    background-color: whitesmoke;
+    color: black;
+}
 .search{
     position: absolute;
     top: 1rem;
@@ -23,6 +29,15 @@
     left: 1rem;
     z-index: 10;
 
+}
+.spotPage{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
 }
 #homeHeader{
     justify-content: center;

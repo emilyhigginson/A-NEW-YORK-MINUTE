@@ -48,11 +48,8 @@ const locationOptions = [
 ]
 
 const priceOptions = [
-    {value: "$ (no cost)", label: "$ (no cost)"},
-    {value: "$$", label: "$$"},
-    {value: "$$$", label: "$$$"},
-    {value: "$$$$", label: "$$$$"},
-    {value: "$$$$$ (go hard or go home)", label: "$$$$$ (go hard or go home)"}
+    {value: true, label: "free "},
+    {value: false, label: "$$$"},
 ]
 
   const walkinOptions = [
@@ -61,12 +58,13 @@ const priceOptions = [
   ]
   
   return (
-    <div>
+    <div className='spotPage'>
 
+    
+      <Map setLng={setLng} setLat={setLat} />
       <h1>No Gatekeeping Here!
         Add your favorite NYC spot so others can experience it too!
       </h1>
-      <Map setLng={setLng} setLat={setLat} />
       <form onSubmit={handleSubmit}>
         <label> Name: </label>
         <input
@@ -99,19 +97,15 @@ const priceOptions = [
           placeholder="Choose a neighborhood"
           onChange={(e) => setLocation(e.value)}
           />
-        <label> Pricepoint? </label>
+        <label> Price Point? </label>
         <br></br>
       <Select
         options={priceOptions}
         placeholder="Name a price"
         onChange={(e) => setPrice(e.value)}
         />
-        <label> Do you need a reservation/appointment? </label>
-        <br></br>
-        <Select
-          onChange={(e) => setWalkin(e.value)}
-          options={walkinOptions}
-        />
+      
+        <p>Find your spot on the map & click to add its coordinates </p>
         <label>Latitude:</label>
         <input 
           type="text"

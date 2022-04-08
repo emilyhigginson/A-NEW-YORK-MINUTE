@@ -1,80 +1,143 @@
 export default 
 [
     {
-        "featureType": "landscape.man_made",
-        "elementType": "all",
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
         "stylers": [
             {
-                "color": "#faf5ed"
-            },
-            {
-                "lightness": "0"
-            },
-            {
-                "gamma": "1"
+                "color": "#444444"
             }
         ]
     },
     {
-        "featureType": "poi.park",
-        "elementType": "geometry.fill",
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels",
         "stylers": [
             {
-                "color": "#bae5a6"
+                "color": "#000000"
             }
         ]
     },
     {
-        "featureType": "road",
-        "elementType": "all",
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text",
         "stylers": [
-            {
-                "weight": "1.00"
-            },
-            {
-                "gamma": "1.8"
-            },
             {
                 "saturation": "0"
             }
         ]
     },
     {
-        "featureType": "road",
-        "elementType": "geometry.fill",
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text.fill",
         "stylers": [
             {
-                "hue": "#ffb200"
+                "color": "#000000"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#f2f2f2"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 45
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "color": "#eb6aa4"
+            },
+            {
+                "gamma": "3.5"
+            },
+            {
+                "weight": "1"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "color": "#cbc7c7"
+            },
+            {
+                "gamma": "2.00"
             }
         ]
     },
     {
         "featureType": "road.arterial",
-        "elementType": "geometry.fill",
+        "elementType": "all",
         "stylers": [
             {
-                "lightness": "0"
-            },
-            {
-                "gamma": "1"
+                "visibility": "simplified"
             }
         ]
     },
     {
-        "featureType": "transit.station.airport",
+        "featureType": "road.arterial",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
         "elementType": "all",
         "stylers": [
             {
-                "hue": "#b000ff"
-            },
-            {
-                "saturation": "23"
-            },
-            {
-                "lightness": "-4"
-            },
-            {
-                "gamma": "0.80"
+                "visibility": "off"
             }
         ]
     },
@@ -83,7 +146,19 @@ export default
         "elementType": "all",
         "stylers": [
             {
-                "color": "#a0daf2"
+                "color": "#eb6aa4"
+            },
+            {
+                "visibility": "on"
+            },
+            {
+                "saturation": "0"
+            },
+            {
+                "lightness": "0"
+            },
+            {
+                "gamma": "1"
             }
         ]
     }

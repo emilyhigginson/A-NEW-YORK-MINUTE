@@ -5,17 +5,18 @@ class Favorite < ApplicationRecord
     def spot_name
         self.spot.name
       end
+
       def spot_image
         self.spot.image
       end
+
       def spot_category
         self.spot.category
       end
+
       def spot_image
         self.spot.image
       end
-      def spot_price
-        self.spot.price_range
-      end
+   
 end
 

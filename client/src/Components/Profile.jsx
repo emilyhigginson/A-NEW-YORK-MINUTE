@@ -5,11 +5,13 @@ import NewSpotForm from './NewSpotForm'
 import { UserContext } from './UserContext'
 
 function Profile({user, spotArray, onFormSubmit, handleDelete}) {
+  console.log(user)
   return (
     <div>
-      {/* <h1>Welcome back, {user}! </h1> */}
+      <h1>Welcome back, {user}! </h1>
+      <img></img>
 <SavedSpots spotArray={spotArray} user={user} handleDelete={handleDelete}/>
-<VisitedSpots spotArray={spotArray} user={user} />
+{/* <VisitedSpots spotArray={spotArray} user={user} /> */}
 {/* <NewSpotForm onFormSubmit={onFormSubmit}/> */}
     </div>
   )

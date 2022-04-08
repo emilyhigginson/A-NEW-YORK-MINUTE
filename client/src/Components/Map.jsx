@@ -3,7 +3,6 @@ import { useLoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps
 import React, {useState} from 'react';
 import Select from 'react-select'
 import ReviewForm from './ReviewForm'
-
 import NewSpotForm from './NewSpotForm';
 import { formatRelative } from "date-fns"
 import usePlacesAutocomplete, {
@@ -21,10 +20,10 @@ import "@reach/combobox/styles.css"
 import mapstyles from './mapstyles';
 
 const libraries = ["places"]
-const mapContainerStyle = {
-    width: '100vw',
-    height: '100vh',
 
+const mapContainerStyle = {
+    width: '50vw',
+    height: '80vh',
 };
 
 const center = {
@@ -42,8 +41,9 @@ const options = {
 export default function Map({setLat, setLng, lat, lng}) {
 
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey : "",
+        googleMapsApiKey : "AIzaSyAK_6JoeZNYhqwGPwLNmmqImmiWzl4lM8E",
         libraries,
+        
     });
 
     const mapRef = React.useRef();
@@ -65,7 +65,6 @@ export default function Map({setLat, setLng, lat, lng}) {
     return (
         <>
         <div>
-            <h1 className='mapHeader'> A NEW YORK MINUTE </h1>
             <Search panTo={panTo} />
             {/* <NewSpotForm/> */}
 
@@ -73,13 +72,13 @@ export default function Map({setLat, setLng, lat, lng}) {
                 zoom={14}
                 center={center}
                 onLoad={onMapLoad}
+                options={options}
                 onClick={(event) => {
-                    setMarkers(current => [...current, {
+                    setMarkers(current => [ {
                         lat: event.latLng.lat(), 
                         lng: event.latLng.lng(),
                     }] ); 
                     setLat(event.latLng.lat());
-                    console.log(lat, lng) 
                     setLng(event.latLng.lng())
                 }
             // onClick={() => {setIsClicked(); handleClick()}}
@@ -121,6 +120,7 @@ function Search({ panTo }) {
             >
 
                 <ComboboxInput
+                id='searchBox'
                     value={value}
                     onChange={(e) => {
                         setValue(e.target.value);
