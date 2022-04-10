@@ -2,7 +2,7 @@ import React from 'react'
 
 function Review({reviews, id}) {
   const comment = reviews.map(review => {
-     
+     this will be removed
           if (review.spot_id === id) {
             return <p> {review.comment} </p> 
           }
