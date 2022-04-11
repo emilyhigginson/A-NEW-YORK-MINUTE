@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *{
-    font-family: 'Poppins';
+    font-family: 'Montserrat', sans-serif;
     /* color: black; */
     /* background-color: white; */
 
@@ -38,6 +37,43 @@
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
+}
+#spotCard{
+    position: relative; 
+
+}
+
+#locationName{
+    background-color: white;
+    position: absolute;
+   top: 300px; 
+   left: 0; 
+padding: 20px;
+font-weight: bolder;
+    }
+    #spotimage{
+        height: 370px;
+    }
+#category{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+#categoryChild1{
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    background-color: purple;
+    border-radius: 10px;
+
+}
+#categoryChild2{
+    padding: 10px;
+    margin: 10px;   
+     background-color: pink;
+    border-radius: 10px;
+
 }
 #homeHeader{
     justify-content: center;

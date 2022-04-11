@@ -5,14 +5,16 @@ function FilterCard({id, name, location, category, walkin, image, price, reviews
 
 
   return (
-    <div>
-        <h1>{name}</h1>
-        <img style={{"width": "500px"}} src={image}/>
-        <h2>{category}</h2>
-        <h3>{location}</h3>
+    <div id= 'spotCard'>
+              <h1 id= 'locationName'>{name}</h1>
+
+        <img id= "spotimage" style={{"width": "500px"}} src={image}/>
+        <div id="category">
+        <h3 id="categoryChild1" >{category} </h3> 
+        <h3 id="categoryChild2"> {location} </h3>
+        </div>
         <p>{price}</p>
-        <p> Walk-ins welcome? {walkin ? "yes" : "no"}</p>
-      <Review reviews={reviews} id={id}/>
+      {/* <Review reviews={reviews} id={id}/> */}
       {/* <button> {isClicked ?  "★" : "☆"}  </button> */}
         <button> </button>
     </div>
