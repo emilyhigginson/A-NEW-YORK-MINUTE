@@ -1,20 +1,34 @@
-import React from 'react'
-import { NavLink, Route} from "react-router-dom"
+import React, {useState} from 'react'
+import { NavLink, Link, Route} from "react-router-dom"
 
-function Header() {
+function Header({ onLogout }) {
+  const [sidebar, setSidebar] = useState(false)
+
+  const showSidebar = () => setSidebar(!sidebar)
+
+    function handleLogout() {
+      fetch("/logout", {
+        method: "DELETE",
+      }).then(() => onLogout());
+    }
+  
   return (
-    <div style={{ "backgroundColor": "transparent"}}>
-        <Route>
-        <NavLink exact to='/login'>Login </NavLink>
-        <NavLink exact to='/spots'>Spots </NavLink>
-        <NavLink exact to='/home'>Home </NavLink>
-        <NavLink exact to='/me'>My Spots </NavLink>
-        <NavLink exact to='/add'>Add a Spot</NavLink>
+    <>
+    <div className='navbar' >
+  
 
-        <NavLink exact to='/'>Search </NavLink>
+        <Route>
+        <NavLink id='link' exact to='/home'>  <h2> New York Minute </h2> </NavLink>
+        <NavLink id='links' exact to='/spots'>Spots </NavLink>
+        <NavLink id='links' exact to='/me'>My Spots </NavLink>
+        <NavLink id='links' exact to='/add'>Add a Spot</NavLink>
+        <NavLink id='links' exact to='/'>Search </NavLink>
         </Route>
+        <button onClick={handleLogout}>Logout </button>
 
     </div>
+
+    </>
   )
 }
 

@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
 import Signup from './Signup';
+import {useHistory} from 'react-router-dom'
 
 function Login({onLogin}) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showForm, setShowForm] = useState(false);
   const [error, setError] = useState([])
+  let history = useHistory();
 
 function toggleSignup() {
   setShowForm((showForm) => !showForm);
@@ -13,25 +15,27 @@ function toggleSignup() {
 
 function handleSubmit(e){
   e.preventDefault();
+  const user = {
+    email,
+    password
+  }
   fetch("/login", {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({email, password}),
+    body: JSON.stringify({user}),
   })
-  .then((res)=> {
-    if (res.ok) {
-      res.json().then((user) => onLogin(user));
-    } else {
-      // res.json().then((data)=> console.log(data))
-      // res.json().then((err)=> setErrors(err.errors));
-    }
-    
+  .then((r) => r.json())
+  .then((user) => { 
+    onLogin(user);
   })
+    history.push("/spots");
 }
   return (
-    <>
+    <div className='loginPage'>
+            <h1 id='minute'>A NEW YORK <br></br> MINUTE</h1>
+
     <div className='loginDiv'>
       <form onSubmit={handleSubmit}>
       <h1>Welcome back, login below. New user? Signup.</h1>
@@ -62,7 +66,7 @@ function handleSubmit(e){
       <button className="submit" onClick={toggleSignup}>Sign Up</button>
       {showForm ? <Signup/> : null}
       </div>
-      </>
+      </div>
   )
 }
 

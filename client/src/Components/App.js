@@ -1,7 +1,7 @@
 
 import React, {useEffect, useState} from "react";
 import './style.css';
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
 import Find from "./Find";
@@ -22,24 +22,31 @@ useEffect(()=> {
   .then(data => setSpotArray(data)) 
 }, [])
 
-useEffect(()=> {
-  fetch('/me').then((res) => {
-    if (res.ok) {
-      res.json().then((user) => setUser(user))
+useEffect(() => {
+  fetch("/me").then((response) => {
+    if (response.ok) {
+      response.json().then((user) => setUser(user));
     }
-   });
- }, []);
+  });
+}, []);
+
+
 
 function onFormSubmit(newSpot) {
   setSpotArray([newSpot, ...spotArray])
 }
 
+// if (user) {
+
   return (
     <div className="App">
       {/* <Map/> */}
    {/* <LandPage/> */}
-<Header/>
-   <Switch>
+   
+   <Router>
+   <Header/>
+
+    <Switch>
 
    <Route path='/spots'> 
    <AllSpots onFormSubmit={onFormSubmit} spotArray={spotArray} user={user}/>
@@ -53,7 +60,7 @@ function onFormSubmit(newSpot) {
    <Home />
    </Route>
 
-   <Route exact path='/me'>
+   <Route exact path='/profile'>
    <Profile user={user} spotArray={spotArray} onFormSubmit={onFormSubmit} />
    </Route>
 
@@ -66,8 +73,13 @@ function onFormSubmit(newSpot) {
    </Route>
 
    </Switch>
+   </Router>
     </div>
   );
+
+// } else {
+//   return <Login onLogin={setUser} />;
+// }
 }
 
 export default App;

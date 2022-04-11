@@ -26,7 +26,7 @@ function Filter(
 
     const freeOptions = [
         {value: "free", label: "free"},
-        {value: "$$", label: "willing to spend"},
+        {value: "$$", label: "willing to spend $$$"},
     ]
 
     function handleSubmit(event){
@@ -64,7 +64,7 @@ function Filter(
         onChange={handleLocationChange}
         />
         <br></br>
-        <lable>What's the budget?</lable>
+        <lable> Price Range?</lable>
         <Select
         options={freeOptions}
         placeholder="Name a price"

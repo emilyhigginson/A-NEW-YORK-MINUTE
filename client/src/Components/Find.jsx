@@ -6,7 +6,12 @@ function Find({spotArray}) {
     const [categoryInput, setCategoryInput] = useState("")
     const [locationInput, setLocationInput] =useState("")
     const [freeInput, setFreeInput] =useState(false)
-
+    const [resultIsShowing, setResultIsShowing] = useState(true)
+    // const [isClicked, setIsClicked] = useState(false)
+   
+    function toggleResult() {
+        setResultIsShowing((resultIsShowing) => !resultIsShowing)
+    }
     const filterByCategory = spotArray.filter((spot) => spot.category.toLowerCase().includes(categoryInput.toLowerCase())
     );
 
@@ -25,7 +30,9 @@ function Find({spotArray}) {
       {/* <button onClick={returnRandom()}></button> */}
       
         <Filter setCategoryInput={setCategoryInput} setLocationInput={setLocationInput} setFreeInput={setFreeInput}/>
-        <FilterContainer spots={filterByLocation}/>
+        {/* <button onClick={toggleResult} > Show Result </button>
+        {resultIsShowing ? null :  <FilterContainer spots={filterByLocation}/>} */}
+       
     </div>
   )
 }

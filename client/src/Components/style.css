@@ -1,18 +1,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Montserrat&display=swap');
+* {
     font-family: 'Montserrat', sans-serif;
     /* color: black; */
-    /* background-color: white; */
+    /* #a3d0f4 cool blue */
+/*     
+   light blue - #6cbeed
+    gray - #a4a4a4
+    tan - #a78667
+    yellow- #fca922
+    orange- #d04d23
+    burnt orange- #9c4532
+    green- #263d04
+    brown- #693012
+    red- #7c0003
+    */
 
 }
-#searchBox{
+.navbar{
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+color:#ff1b8d;
+padding: 5px;
+height: 10vh;
+background: rgba(255, 255, 255, 0.9);
+
+}
+#links{
+    padding-top: 30px;
+    padding-left: 10px;
+    color:#ff1b8d;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.9);
+
+}
+
+#link{
+    padding-bottom: 20px;
+    color:#ff1b8d;
+    text-decoration: none;
+align-content: right;
+}
+#links:visited {
+    color:#ff1b8d;
+        text-decoration: none;
+}
+.links:focus>span {
+    color: black;
+}
+.loginPage, .homepage {
+
+    background-image: url("https://wallpaperbat.com/img/81402-other-new-york-city-black-white-photography-wallpaper-picture-hd.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    opacity: .9;
+    z-index: 10;
+    top: 20%;
+    
+
+}
+#minute{
+    font-family: 'Bungee Shade', cursive;
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+}
+.loginDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    margin-top: 70px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    z-index: 200;
+    width: 400px;
+    padding: 15px;
+    border-radius: 10%;
+    background: rgba(255, 255, 255, 0.9);
+    /* opacity: 0.8; */
+    color: #d04d23;
+}
+
+
+#leftCard {
+    width: 540px;
+}
+
+#searchBox {
     margin-top: 30px;
     padding: 10px;
     width: 40%;
     background-color: whitesmoke;
     color: black;
 }
-.search{
+
+.search {
     position: absolute;
     top: 1rem;
     left: 50%;
@@ -20,16 +110,18 @@
     width: 100%;
     max-width: 400px;
     z-index: 10;
- 
+
 }
-.mapHeader{
+
+.mapHeader {
     position: absolute;
     top: 1rem;
     left: 1rem;
     z-index: 10;
 
 }
-.spotPage{
+
+.spotPage {
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -38,72 +130,116 @@
     flex-wrap: wrap;
     text-align: center;
 }
-#spotCard{
-    position: relative; 
+
+#spotCard {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-width: 75%;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #a4a4a4;
+    border-radius: 10px;
+    background-color: #f2f2f2;
 
 }
 
-#locationName{
-    background-color: white;
+/* #filterMap {
+    align-content: right;
+    margin-left: 10px;
+    width: 300px;
+} */
+
+#locationName {
+    background-color: WHITE;
+    color: #1bb2ff;
+    text-decoration: underline;
     position: absolute;
-   top: 300px; 
-   left: 0; 
-padding: 20px;
-font-weight: bolder;
-    }
-    #spotimage{
-        height: 370px;
-    }
-#category{
+    text-transform: uppercase;
+    top: 315px;
+    /* left: 0; */
+    padding: 20px;
+    font-weight: bolder;
+    /* border: 2px solid black; */
+    /* border-radius: 8px; */
+
+}
+
+#spotimage {
+    height: 370px;
+}
+
+#category {
     display: flex;
     flex-direction: row;
     margin: 20px;
+    padding: 10px;
 }
 
-#categoryChild1{
+#categoryChild1 {
     padding: 10px;
     margin: 10px;
     color: white;
-    background-color: purple;
+    background-color: #ff1b8d;
     border-radius: 10px;
+    font-size: 20px;
+    font-weight: 300;
 
 }
-#categoryChild2{
+
+#categoryChild2 {
     padding: 10px;
-    margin: 10px;   
-     background-color: pink;
+    margin: 10px;
+    color: white;
+    background-color: #1bb2ff;
     border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+
 
 }
-#homeHeader{
+
+#categoryChild3 {
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffd900;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 300;
+    
+
+}
+#saveButton{
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    background-color: #ffd900; 
+    border-radius: 10px;
+    border: none;
+
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#homeHeader {
     justify-content: center;
     align-content: center;
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
 }
-.homeContainer{
-    display: flex; 
+
+.homeContainer {
+    display: flex;
     flex-wrap: wrap;
     padding: 30px;
     margin: 10px;
     justify-content: center;
     align-content: center;
 }
-.homeDiv{
-   
-margin: 20px;
-justify-content: center;
-align-content: center;
-text-align: center;
-width: 400px;
-padding: 20px;
-border-radius: 10%;
-background-color: black;
-color: white;
-}
 
-.loginDiv{
- 
+.homeDiv {
+
     margin: 20px;
     justify-content: center;
     align-content: center;
@@ -113,5 +249,4 @@ color: white;
     border-radius: 10%;
     background-color: black;
     color: white;
-
 }

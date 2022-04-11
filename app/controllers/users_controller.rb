@@ -12,7 +12,7 @@ class UsersController < ApplicationController
         else
           render json: { error: "Not authorized" }, status: :unauthorized
         end
-      
+    end
 end
 
     def create
@@ -31,4 +31,5 @@ end
         params.permit(:username, :password, :email, :avatar)
     end
 
+end
 end

@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
-import ReviewForm from './ReviewForm'
+import React, {useState} from 'react';
+import ReviewForm from './ReviewForm';
+import Spotmap from './Spotmap';
 // import Review from './Review'
 
-function SpotCard({name, location, category, walkin, image, price, user, id, spot_id}) {
+function SpotCard({name, location, category, lat, lng, image, price, user, id, spot_id}) {
 const [formIsShowing, setFormIsShowing] = useState(true)
 const [isClicked, setIsClicked] = useState(false)
  // add to favorites 
@@ -28,18 +29,28 @@ const [isClicked, setIsClicked] = useState(false)
  }
 
   return (
-    <div>
-        <h1>{name}</h1>
-        <img style={{"width": "500px"}} src={image}/>
-        <h2>{category}</h2>
-        <h3>{location}</h3>
-        <p>{price}</p>
-        <p> Walk-ins welcome? {walkin ? "yes" : "no"}</p>
+    <div id ='spotCard'>
+       <div id= 'leftCard'>
+        <h1 id= 'locationName'>{name}</h1>
+        <img id= "spotimage" style={{"width": "500px"}} src={image}/>
+        <div id="category">
+        <h3 id="categoryChild1" >{category} </h3> 
+        <h3 id="categoryChild2"> 📍{location} </h3>
+        <button id = 'saveButton' onClick={() => {setIsClicked(); handleClick()}}> {isClicked ?  "★" : "☆"}  </button>
+
+        
+        </div>
+    
       {/* <Review/>             */}
-<button onClick={() => {setIsClicked(); handleClick()}}> {isClicked ?  "★" : "☆"}  </button>
         <button onClick={toggleReviewForm} > Write a Review </button>
         {formIsShowing ? null : <ReviewForm spot_id={id} user={user}/>}
+        </div>
+        <div id= "filterMap">
+          
+        <Spotmap name={name} lat={lat} lng={lng}/>
+        </div>
     </div>
+
   )
 }
 

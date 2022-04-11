@@ -50,7 +50,7 @@ export default
         "elementType": "all",
         "stylers": [
             {
-                "visibility": "off"
+                "visibility": "on"
             }
         ]
     },
@@ -89,7 +89,7 @@ export default
         "elementType": "labels",
         "stylers": [
             {
-                "visibility": "off"
+                "visibility": "on"
             }
         ]
     },
@@ -98,7 +98,7 @@ export default
         "elementType": "labels.text.stroke",
         "stylers": [
             {
-                "visibility": "off"
+                "visibility": "on"
             }
         ]
     },
@@ -128,7 +128,7 @@ export default
         "elementType": "labels.icon",
         "stylers": [
             {
-                "visibility": "off"
+                "visibility": "on"
             }
         ]
     },
@@ -137,7 +137,7 @@ export default
         "elementType": "all",
         "stylers": [
             {
-                "visibility": "off"
+                "visibility": "on"
             }
         ]
     },
@@ -146,7 +146,7 @@ export default
         "elementType": "all",
         "stylers": [
             {
-                "color": "#eb6aa4"
+                "color": "#13d1ff"
             },
             {
                 "visibility": "on"

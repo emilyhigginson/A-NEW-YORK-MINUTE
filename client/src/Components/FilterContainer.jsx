@@ -11,13 +11,14 @@ function FilterContainer({spots}) {
     .then(res => res.json())
     .then(data => setReviews(data)) 
   }, [])
-  
   // const  review= spots.reviews.map((review) => review)
 const filteredSpots = spots.map(spot=>
    <FilterCard
     reviews={reviews} 
-   key={spot.id} id={spot.id} name={spot.name} location={spot.location} category={spot.category} price={spot.price_range} walkin={spot.walk_in} image={spot.image} /> )
-    return (
+   key={spot.id} id={spot.id} name={spot.name} location={spot.location} category={spot.category} lat={spot.lat} lng={spot.lng} image={spot.image} /> )
+   console.log(filteredSpots)
+ 
+   return (
     <div>
         {filteredSpots}
     </div>

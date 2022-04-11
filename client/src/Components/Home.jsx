@@ -3,7 +3,7 @@ import React from 'react'
 function Home() {
 
   return (
-    <div>
+    <div className='homepage'>
     
     <h1 id='homeHeader'>SO MUCH TO DO, SO LITTLE TIME.</h1>
     
