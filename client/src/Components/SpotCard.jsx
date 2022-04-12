@@ -1,13 +1,18 @@
 import React, {useState} from 'react';
 import ReviewForm from './ReviewForm';
 import Spotmap from './Spotmap';
+import Review from './Review';
 // import Review from './Review'
 
-function SpotCard({name, location, category, lat, lng, image, price, user, id, spot_id}) {
+function SpotCard({name, location, category, lat, lng, image, price, user, id, reviews}) {
 const [formIsShowing, setFormIsShowing] = useState(true)
 const [isClicked, setIsClicked] = useState(false)
  // add to favorites 
+ const [showReviews, setShowReviews] = useState(false);
 
+ function toggleReviews() {
+   setShowReviews((showReviews) => !showReviews);
+ }
  function toggleReviewForm() {
      setFormIsShowing((formIsShowing) => !formIsShowing)
  }
@@ -44,6 +49,9 @@ const [isClicked, setIsClicked] = useState(false)
       {/* <Review/>             */}
         <button onClick={toggleReviewForm} > Write a Review </button>
         {formIsShowing ? null : <ReviewForm spot_id={id} user={user}/>}
+        <button onClick={toggleReviews} > Show Reviews </button>
+
+        {showReviews ? <Review reviews={reviews} id={id} /> : null}
         </div>
         <div id= "filterMap">
           

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import FilterCard from './FilterCard'
+import SpotCard from './SpotCard'
 
 function FilterContainer({spots}) {
 // const [spotId, setId] = useState("")
@@ -13,7 +14,7 @@ function FilterContainer({spots}) {
   }, [])
   // const  review= spots.reviews.map((review) => review)
 const filteredSpots = spots.map(spot=>
-   <FilterCard
+   <SpotCard
     reviews={reviews} 
    key={spot.id} id={spot.id} name={spot.name} location={spot.location} category={spot.category} lat={spot.lat} lng={spot.lng} image={spot.image} /> )
    console.log(filteredSpots)

@@ -22,7 +22,7 @@ function Header({ onLogout }) {
         <NavLink id='links' exact to='/spots'>Spots </NavLink>
         <NavLink id='links' exact to='/me'>My Spots </NavLink>
         <NavLink id='links' exact to='/add'>Add a Spot</NavLink>
-        <NavLink id='links' exact to='/'>Search </NavLink>
+        <NavLink id='links' exact to='/search'>Search </NavLink>
         </Route>
         <button onClick={handleLogout}>Logout </button>
 

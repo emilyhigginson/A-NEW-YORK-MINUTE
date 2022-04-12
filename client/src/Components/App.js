@@ -68,7 +68,7 @@ function onFormSubmit(newSpot) {
      <NewSpotForm onFormSubmit={onFormSubmit} />
    </Route>
 
-   <Route exact path ='/'>
+   <Route exact path ='/search'>
    <Find spotArray={spotArray}/>
    </Route>
 

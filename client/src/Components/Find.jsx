@@ -30,8 +30,8 @@ function Find({spotArray}) {
       {/* <button onClick={returnRandom()}></button> */}
       
         <Filter setCategoryInput={setCategoryInput} setLocationInput={setLocationInput} setFreeInput={setFreeInput}/>
-        {/* <button onClick={toggleResult} > Show Result </button>
-        {resultIsShowing ? null :  <FilterContainer spots={filterByLocation}/>} */}
+        <button onClick={toggleResult} > Show Result </button>
+        {resultIsShowing ? null :  <FilterContainer spots={filterByLocation}/>}
        
     </div>
   )
