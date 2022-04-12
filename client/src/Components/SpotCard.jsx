@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import ReviewForm from './ReviewForm';
 import Spotmap from './Spotmap';
 import Review from './Review';
-// import Review from './Review'
 
 function SpotCard({name, location, category, lat, lng, image, price, user, id, reviews}) {
 const [formIsShowing, setFormIsShowing] = useState(true)
