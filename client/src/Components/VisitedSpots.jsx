@@ -10,7 +10,9 @@ import React from 'react'
         <div>
           <h1> Here are all of the reviews you've written:  </h1>
           {/* {reviewedSpots} */}
+          <div id='reviewContainer'>
           {myReviews}
+          </div>
         </div>
       )
     }
