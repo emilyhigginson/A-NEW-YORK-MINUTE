@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import SavedSpots from './SavedSpots'
 import VisitedSpots from './VisitedSpots'
 import { UserContext } from './UserContext'
+import GuestCheck from './GuestCheck'
 
 function Profile({user, spotArray, handleDelete}) {
 const [reviews , setReviews] = useState([])
@@ -15,7 +16,7 @@ const [reviews , setReviews] = useState([])
 
   const myReviews= reviews.map(review => {
     if(review.user_id === user.id) {
-    return <p> {review.comment} {review.spot_name}</p> 
+    return <GuestCheck comment = {review.comment} name = {review.spot_name} > </GuestCheck> 
   }
   else {
       return null
@@ -24,9 +25,8 @@ const [reviews , setReviews] = useState([])
 
   return (
     <div>
-      <br></br>
       <div id="profileHeader">
-      <img id= 'avatar' src= {user.avatar} />
+      {/* <img id= 'avatar' src= {user.avatar} /> */}
       <h1 id='welcome'> Welcome back, {user.username}! </h1>
       </div>
 <SavedSpots spotArray={spotArray} user={user} handleDelete={handleDelete}/>
