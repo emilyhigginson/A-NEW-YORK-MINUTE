@@ -25,8 +25,10 @@ const [reviews , setReviews] = useState([])
   return (
     <div>
       <br></br>
-      <h1>Welcome back, {user.username}! </h1>
-      <img></img>
+      <div id="profileHeader">
+      <img id= 'avatar' src= {user.avatar} />
+      <h1 id='welcome'> Welcome back, {user.username}! </h1>
+      </div>
 <SavedSpots spotArray={spotArray} user={user} handleDelete={handleDelete}/>
 
 <VisitedSpots myReviews={myReviews} user={user} />

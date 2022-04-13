@@ -14,7 +14,7 @@ User.destroy_all
 Spot.destroy_all 
 Favorite.destroy_all
 
-emily = User.create(username: "emhiggs" , password: "123", email: "emily@gmail.com")
+emily = User.create(username: "emhiggs" , password: "123", email: "emily@gmail.com", avatar: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/socialmedia/apple/81/rat_1f400.png")
 lyn = User.create(username: "lynniebean" , password: "123", email: "lyn@gmail.com")
 blair = User.create(username: "bliz" , password: "123", email: "blair@gmail.com")
 george = User.create(username: "george" , password: "123", email: "george@gmail.com")

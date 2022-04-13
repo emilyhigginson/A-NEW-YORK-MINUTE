@@ -25,7 +25,7 @@ function Home() {
         </br>Login / sign up to start curating your next outing. </h3>
         </div>
         </NavLink>
-        <NavLink id='links' exact to='/profile'>
+        <NavLink id='links' exact to='/add'>
         <div className='homeDiv'>
         <img style={{"width": "300px"}} src='https://i.etsystatic.com/6628690/r/il/4d9477/1814633811/il_340x270.1814633811_3l8o.jpg'></img>
         <h3> Find somewhere new? Add it here <br>

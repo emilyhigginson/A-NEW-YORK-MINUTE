@@ -15,6 +15,13 @@ class SpotsController < ApplicationController
         render json: spot, status: :created
     end
 
+    def destroy
+        spot = Spot.find(params[:id])
+
+        spot.delete
+        head :no_content
+    end
+
     private 
 
     def spot_params

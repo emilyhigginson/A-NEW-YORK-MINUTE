@@ -15,20 +15,18 @@ function SavedCard({handleDelete, user, id, name, location, category, image}) {
       
 <div id ='spotCard'>
        <div id= 'leftCard'>
-        <h1 id= 'locationName'>{name}</h1>
+        <h1 id= 'savedLocationName'>{name}</h1>
         <img id= "spotimage" style={{"width": "500px"}} src={image}/>
-        <div id="category">
-        <h3 id="categoryChild1" >{category} </h3> 
-        <h3 id="categoryChild2"> 📍{location} </h3>
+        <h3 id="savedCategoryChild1" >{category} </h3> 
+        <h3 id="savedCategoryChild2"> ● {location} </h3>
+        <div id = 'buttonDiv'>
+        <button className='button' onClick={() => handleDelete(id)}> ★ Unsave </button> 
+        <button className='button' onClick={toggleReviewForm} > Been here? Write a Review </button>
         </div>
-    
-        <button onClick={toggleReviewForm} > Been here? Write a Review </button>
         {formIsShowing ? null : <ReviewForm spot_id={id} user={user}/>}
 
         </div>
 
-          <button onClick={() => handleDelete(id)}> Unsave this Spot </button>
-          <button> </button>
       </div>
     )
   }

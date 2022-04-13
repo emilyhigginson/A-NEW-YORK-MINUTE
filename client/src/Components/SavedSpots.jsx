@@ -31,7 +31,9 @@ const favs = mySaved.map((spot) => <SavedCard handleDelete= {handleDelete} user_
   return (
     <div>
     <h1> Here are the spots you've saved:</h1>
+    <div className='savedContainer'>
 {favs} 
+</div>
     </div>
   )
 }

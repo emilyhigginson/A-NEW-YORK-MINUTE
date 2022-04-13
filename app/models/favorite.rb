@@ -14,6 +14,10 @@ class Favorite < ApplicationRecord
         self.spot.category
       end
 
+      def spot_location
+        self.spot.location
+      end
+
       def spot_image
         self.spot.image
       end
