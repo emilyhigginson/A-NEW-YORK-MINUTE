@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Filter from './Filter';
 import FilterContainer from './FilterContainer';
 
-function Find({spotArray}) {
+function Find({spotArray, user}) {
     const [categoryInput, setCategoryInput] = useState("")
     const [locationInput, setLocationInput] =useState("")
     const [freeInput, setFreeInput] =useState(false)
@@ -31,7 +31,7 @@ function Find({spotArray}) {
       
         <Filter setCategoryInput={setCategoryInput} setLocationInput={setLocationInput} setFreeInput={setFreeInput}/>
         <button onClick={toggleResult} > Show Result </button>
-        {resultIsShowing ? null :  <FilterContainer spots={filterByLocation}/>}
+        {resultIsShowing ? null :  <FilterContainer user={user} spots={filterByLocation}/>}
        
     </div>
   )

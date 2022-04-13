@@ -64,9 +64,9 @@ export default function Map({setLat, setLng, lat, lng}) {
     if (!isLoaded) return "Loading maps";
     return (
         <>
-        <div>
+        <div id= 'mapbox'>
+            <br></br>
             <Search panTo={panTo} />
-            {/* <NewSpotForm/> */}
 
             <GoogleMap mapContainerStyle={mapContainerStyle}
                 zoom={14}

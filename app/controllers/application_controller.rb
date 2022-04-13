@@ -13,4 +13,9 @@ class ApplicationController < ActionController::API
       render json: {error: "#{error.model} Not Found"}, status: :not_found
   end 
 
+  def current_user
+    User.find_by(username: 'emhiggs')
+    # User.find_by(id: session[:user_id]) 
+  end
+
 end

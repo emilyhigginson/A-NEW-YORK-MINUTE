@@ -1,6 +1,5 @@
 import React from 'react'
 import SpotCard from './SpotCard'
-import Review from './Review'
 
 function AllSpots({ spotArray, user }) {
 

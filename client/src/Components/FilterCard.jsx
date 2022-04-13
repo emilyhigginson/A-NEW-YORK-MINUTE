@@ -9,8 +9,6 @@ function toggleReviews() {
   setShowReviews((showReviews) => !showReviews);
 }
 
-
-
   return (
     <div id= 'spotCard' >
       <div id= 'leftCard'>

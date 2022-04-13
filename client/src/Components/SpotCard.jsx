@@ -3,7 +3,7 @@ import ReviewForm from './ReviewForm';
 import Spotmap from './Spotmap';
 import Review from './Review';
 
-function SpotCard({name, location, category, lat, lng, image, price, user, id, reviews}) {
+function SpotCard({name, location, category, lat, lng, image, price, user, spot_id, id, reviews}) {
 const [formIsShowing, setFormIsShowing] = useState(true)
 const [isClicked, setIsClicked] = useState(false)
  // add to favorites 
@@ -15,11 +15,10 @@ const [isClicked, setIsClicked] = useState(false)
  function toggleReviewForm() {
      setFormIsShowing((formIsShowing) => !formIsShowing)
  }
-
  function handleClick(){
    const favorite = {
     user_id: user.id, 
-    spot_id: id
+    spot_id: spot_id
    }
    fetch("/favorites", {
     method: "POST",
@@ -41,8 +40,6 @@ const [isClicked, setIsClicked] = useState(false)
         <h3 id="categoryChild1" >{category} </h3> 
         <h3 id="categoryChild2"> 📍{location} </h3>
         <button id = 'saveButton' onClick={() => {setIsClicked(); handleClick()}}> {isClicked ?  "★" : "☆"}  </button>
-
-        
         </div>
     
       {/* <Review/>             */}

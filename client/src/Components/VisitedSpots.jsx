@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
-function VisitedSpots({user, spotArray}) {
+function VisitedSpots({ myReviews, user}) {
+  
+const reviewedSpots = (user.spots)
+console.log(reviewedSpots)
 
-  const mySpots = spotArray.filter((spot) => console.log(spot.user_id))
 
-  console.log(mySpots)
   return (
     <div>
-      <h1> Spots you've visited and reviewed:  </h1>
-      {mySpots}
+      <h1> Here are all of the reviews you've written:  </h1>
+      {/* {reviewedSpots} */}
+      {myReviews}
     </div>
   )
 }

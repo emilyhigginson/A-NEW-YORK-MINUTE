@@ -59,8 +59,11 @@ Spot.create(name: "Brooklyn Bridge", image: "", location: "Manhattan", category:
 Spot.create(name: "The High Line", image: "", location: "Chelsea", category: "Activity", free: true)
 Spot.create(name: "", image: "", location: "", category: "Food & Drink", free: false)
 
-Favorite.create(user_id: User.first.id, spot_id: Spot.first.id)
-Favorite.create(user_id: User.last.id, spot_id: Spot.last.id)
+Favorite.create(user_id: emily.id, spot_id: Spot.first.id)
+Favorite.create(user_id: emily.id, spot_id: Spot.third.id)
+Favorite.create(user_id: emily.id, spot_id: Spot.fourth.id)
+Favorite.create(user_id: emily.id, spot_id: Spot.fifth.id)
+Favorite.create(user_id: emily.id, spot_id: Spot.last.id)
 
 user_id = User.ids.sample
 spot_id = Spot.ids.sample

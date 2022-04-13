@@ -6,15 +6,21 @@ import Login from "./Login";
 import Home from "./Home";
 import Find from "./Find";
 import Profile from "./Profile";
-import LandPage from "./LandPage"
 import AllSpots from "./AllSpots";
-import Map from "./Map";
 import Header from "./Header";
 import NewSpotForm from "./NewSpotForm";
 
 function App() {
-  const [user, setUser] = useState(null);
   const [spotArray, setSpotArray] = useState([]);
+  const [currentUser, setCurrentUser] = useState({})
+
+  useEffect(() => {
+    fetch("/me")
+      .then((res) => res.json())
+      .then(setCurrentUser)
+  }, [])
+
+console.log(currentUser)
 
 useEffect(()=> {
   fetch ('/spots')
@@ -22,21 +28,11 @@ useEffect(()=> {
   .then(data => setSpotArray(data)) 
 }, [])
 
-useEffect(() => {
-  fetch("/me").then((response) => {
-    if (response.ok) {
-      response.json().then((user) => setUser(user));
-    }
-  });
-}, []);
-
-
-
 function onFormSubmit(newSpot) {
   setSpotArray([newSpot, ...spotArray])
 }
 
-// if (user) {
+// if (currentUser) {
 
   return (
     <div className="App">
@@ -49,11 +45,11 @@ function onFormSubmit(newSpot) {
     <Switch>
 
    <Route path='/spots'> 
-   <AllSpots onFormSubmit={onFormSubmit} spotArray={spotArray} user={user}/>
+   <AllSpots onFormSubmit={onFormSubmit} spotArray={spotArray} user={currentUser}/>
    </Route>
 
    <Route exact path='/login'> 
-   <Login onLogin={setUser}/>
+   <Login onLogin={setCurrentUser}/>
    </Route>
 
    <Route exact path='/home'>
@@ -61,7 +57,7 @@ function onFormSubmit(newSpot) {
    </Route>
 
    <Route exact path='/profile'>
-   <Profile user={user} spotArray={spotArray} onFormSubmit={onFormSubmit} />
+   <Profile user={currentUser} spotArray={spotArray} onFormSubmit={onFormSubmit} />
    </Route>
 
    <Route exact path = '/add'>
@@ -69,7 +65,7 @@ function onFormSubmit(newSpot) {
    </Route>
 
    <Route exact path ='/search'>
-   <Find spotArray={spotArray}/>
+   <Find user={currentUser} spotArray={spotArray}/>
    </Route>
 
    </Switch>
@@ -78,7 +74,7 @@ function onFormSubmit(newSpot) {
   );
 
 // } else {
-//   return <Login onLogin={setUser} />;
+//   return <Login onLogin={setCurrentUser} />;
 // }
 }
 
