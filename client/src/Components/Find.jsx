@@ -18,12 +18,14 @@ function Find({spotArray, user}) {
     const filterByLocation = filterByCategory.filter((spot) =>
     spot.location.toLowerCase().includes(locationInput.toLowerCase())
   );
-  
-
-    // const filterByPrice = filterByLocation.filter((spot) =>
-    // spot.free.includes(freeInput)
-
-  // );
+console.log(filterByLocation)
+  const filterByPrice = filterByLocation.filter((spot) => {
+    if ((spot.free) === freeInput) { 
+      return spot 
+    } else if ((spot.free === freeInput)) {
+    return null 
+    }
+  });
 
   return (
     <div>
@@ -31,7 +33,7 @@ function Find({spotArray, user}) {
       
         <Filter setCategoryInput={setCategoryInput} setLocationInput={setLocationInput} setFreeInput={setFreeInput}/>
         <button onClick={toggleResult} > Show Result </button>
-        {resultIsShowing ? null :  <FilterContainer user={user} spots={filterByLocation}/>}
+        {resultIsShowing ? null :  <FilterContainer user={user} spots={filterByPrice}/>}
        
     </div>
   )

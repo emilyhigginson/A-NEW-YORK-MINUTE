@@ -2,8 +2,8 @@ import React from 'react'
 
   function VisitedSpots({ myReviews, user}) {
   
-    const reviewedSpots = (user.spots)
-    console.log(reviewedSpots)
+    // const reviewedSpots = (user.spots)
+    // console.log(reviewedSpots)
     
     
       return (

@@ -10,7 +10,7 @@ function MyTimer({ expiryTimestamp }) {
     pause,
     resume,
     restart,
-  } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
+  } = useTimer({ expiryTimestamp, onExpire: () => alert('Your minute has passed! Time to make a decision.') });
 
 
   return (

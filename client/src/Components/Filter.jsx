@@ -9,8 +9,7 @@ function Filter(
         { value: "Down for Anything", label: "Down for Anything" },
         { value: "Food & Drink", label: "Food & Drink" },
         { value: "Activity", label: "Activity" },
-        { value: "Fitness", label: "Fitness" },
-        { value: "Touristy", label: "Touristy" }
+        { value: "Late Night", label: "Late Night" }
       ];
 
     const locationOptions = [
@@ -19,14 +18,19 @@ function Filter(
         {value: "East Village", label: "East Village"},
         {value: "Flatiron", label: "Flatiron"},
         {value: "Gramercy", label: "Gramercy"},
+        {value: "Kips Bay", label: "Kips Bay"},
+        {value: "Lower East Side", label: "Lower East Side"},
         {value: "Midtown", label: "Midtown"},
+        {value: "Nolita", label: "Nolita"},
         {value: "Times Square", label: "Times Square"},
+        {value: "Union Square", label: "Union Square"},
+
         {value: "West Village", label: "West Village"}
     ]
 
     const freeOptions = [
-        {value: "free", label: "free"},
-        {value: "$$", label: "willing to spend $$$"},
+        {value: true, label: "free"},
+        {value: false, label: "willing to spend $$$"},
     ]
 
     function handleSubmit(event){

@@ -1,29 +1,34 @@
 import React, {useState, useContext} from 'react'
+import MyReviews from './GuestCheck'
 import { UserContext } from "./UserContext"
 
-function ReviewForm({user, spot_id}) {
+function ReviewForm({reviews, setReviews, handleDelete, user, spot_id}) {
 
     const [comment, setComment] = useState("")
-    const { currentUser } = useContext(UserContext)
-
+    
     function handleSubmit(event){
+      event.preventDefault();
+
         const review = {
             comment, 
             user_id: user.id, 
             spot_id: spot_id
         }
-        event.preventDefault();
         fetch("/reviews", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
             body: JSON.stringify(review),
+
           })
+
             .then((response) => response.json())
+            
             .then(review => console.log(review))
         }
-    
+        console.log(spot_id)
+
   return (
     <div>
         <form onSubmit={handleSubmit}>
@@ -35,7 +40,7 @@ function ReviewForm({user, spot_id}) {
           onChange={(e) => setComment(e.target.value)}
         />
 
- <button 
+ <button onClick={handleDelete}
         type="submit"
         name="submit"
        > 

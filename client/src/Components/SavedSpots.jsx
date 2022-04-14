@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import SavedCard from './SavedCard'
 
-function SavedSpots({user, spotArray, handleDelete}) {
+function SavedSpots({user, setReviews, reviews, spotArray, handleDelete}) {
 
 const [mySaved, setMySaved] = useState([])
 
@@ -27,7 +27,7 @@ function handleDelete(id) {
   });
 }
 // console.log(mySaved)
-const favs = mySaved.map((spot) => <SavedCard handleDelete= {handleDelete} user_id={user.id} key={spot.id} name={spot.spot_name} location={spot.spot_location} category={spot.spot_category} image={spot.spot_image} id={spot.id} lat={spot.lat} lng={spot.lng}/>)
+const favs = mySaved.map((spot) => <SavedCard setReviews={setReviews} reviews={reviews} handleDelete= {handleDelete} user_id={user.id} key={spot.id} name={spot.spot_name} location={spot.spot_location} category={spot.spot_category} image={spot.spot_image} id={spot.id} lat={spot.lat} lng={spot.lng}/>)
   return (
     <div>
     <h1> Here are the spots you've saved:</h1>

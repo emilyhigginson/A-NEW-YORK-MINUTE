@@ -12,7 +12,8 @@ const [reviews , setReviews] = useState([])
     .then(res => res.json())
     .then(data => setReviews(data)) 
   }, [])
-
+  
+console.log(reviews)
 
   const myReviews= reviews.map(review => {
     if(review.user_id === user.id) {
@@ -29,7 +30,7 @@ const [reviews , setReviews] = useState([])
       {/* <img id= 'avatar' src= {user.avatar} /> */}
       <h1 id='welcome'> Welcome back, {user.username}! </h1>
       </div>
-<SavedSpots spotArray={spotArray} user={user} handleDelete={handleDelete}/>
+<SavedSpots setReviews={setReviews} reviews={reviews} spotArray={spotArray} user={user} handleDelete={handleDelete}/>
 
 <VisitedSpots myReviews={myReviews} user={user} />
     </div>

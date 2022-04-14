@@ -19,6 +19,12 @@ class ReviewsController < ApplicationController
         end
     end
 
+    def destroy
+        spot = Review.find(params[:id])
+
+        spot.delete
+        head :no_content
+    end
     private 
 
     def review_params

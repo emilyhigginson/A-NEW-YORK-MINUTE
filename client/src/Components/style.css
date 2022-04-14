@@ -369,6 +369,7 @@
 #reviewContainer{
     display: flex;
     overflow-x: scroll;
+    justify-content: space-between;
     /* flex-direction: row; */
 }
 #checkContent{

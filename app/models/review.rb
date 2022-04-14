@@ -6,4 +6,7 @@ class Review < ApplicationRecord
         self.spot.name
       end
 
+      def username 
+        self.user.username
+      end
 end
