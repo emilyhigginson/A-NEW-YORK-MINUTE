@@ -18,7 +18,7 @@ function SavedCard({ setReviews, handleDelete, user, reviews, id, name, location
         <h3 id="savedCategoryChild1" >{category} </h3>
         <h3 id="savedCategoryChild2"> {location} </h3>
         <div id='buttonDiv'>
-          <button className='button' onClick={() => handleDelete(id)}> ★ Unsave </button>
+          <button className='button' onClick={() => handleDelete}> ★ Unsave </button>
           <button className='button' onClick={toggleReviewForm} > Been here? Write a Review </button>
         </div>
         {formIsShowing ? null : <ReviewForm  spot_id={id} user={user} />}

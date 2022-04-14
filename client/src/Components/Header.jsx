@@ -1,17 +1,20 @@
 import React, {useState} from 'react'
 import { NavLink, Link, Route} from "react-router-dom"
 
-function Header({ onLogout }) {
-  const [sidebar, setSidebar] = useState(false)
+function Header({ onLogout, currentUser, setCurrentUser }) {
 
-  const showSidebar = () => setSidebar(!sidebar)
-
-    function handleLogout() {
-      fetch("/logout", {
-        method: "DELETE",
-      }).then(() => onLogout(handleLogout()));
-    }
+    // function handleLogout() {
+    //   fetch("/logout", {
+    //     method: "DELETE",
+    //   }).then(() => onLogout(handleLogout()));
+    // }
   
+    function handleLogout() {
+      fetch("/logout", { method: "DELETE" })
+  
+      console.log(currentUser)
+      setCurrentUser("")
+    }
   return (
     <>
     <div className='navbar' >

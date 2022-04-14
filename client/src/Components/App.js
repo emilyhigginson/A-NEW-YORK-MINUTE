@@ -31,8 +31,8 @@ useEffect(()=> {
 function onFormSubmit(newSpot) {
   setSpotArray([newSpot, ...spotArray])
 }
-
-// if (currentUser) {
+console.log(currentUser)
+if (currentUser) {
 
   return (
     <div className="App">
@@ -40,7 +40,7 @@ function onFormSubmit(newSpot) {
    {/* <LandPage/> */}
    
    <Router>
-   <Header/>
+   <Header currentUser={currentUser} setCurrentUser={setCurrentUser}/>
 
     <Switch>
 
@@ -49,7 +49,7 @@ function onFormSubmit(newSpot) {
    </Route>
 
    <Route exact path='/login'> 
-   <Login onLogin={setCurrentUser}/>
+   <Login currentUser={currentUser} setCurrentUser={setCurrentUser} onLogin={setCurrentUser}/>
    </Route>
 
    <Route exact path='/home'>
@@ -73,9 +73,9 @@ function onFormSubmit(newSpot) {
     </div>
   );
 
-// } else {
-//   return <Login onLogin={setCurrentUser} />;
-// }
+} else {
+  return <Login onLogin={setCurrentUser} />;
+}
 }
 
 export default App;

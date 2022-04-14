@@ -45,7 +45,7 @@ setIsClicked((isClicked) => !isClicked)}
         <h3 id="categoryChild2"> 📍{location} </h3>
         <button id = 'saveButton' onClick={() => {setClicked(); handleClick()}}> 
         {/* user.spots.includes(spot) :  */}
-        {user.favorite_spots.includes(spot)|| isClicked ?  "★" : "☆"}  </button>
+        {isClicked ?  "★" : "☆"}  </button>
         </div>
     
       {/* <Review/>             */}

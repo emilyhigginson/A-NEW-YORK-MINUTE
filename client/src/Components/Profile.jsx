@@ -30,8 +30,13 @@ console.log(reviews)
       {/* <img id= 'avatar' src= {user.avatar} /> */}
       <h1 id='welcome'> Welcome back, {user.username}! </h1>
       </div>
-      <Friends user={user}></Friends>
-<SavedSpots setReviews={setReviews} reviews={reviews} spotArray={spotArray} user={user} handleDelete={handleDelete}/>
+      {/* <Friends user={user}></Friends> */}
+<SavedSpots 
+setReviews={setReviews} 
+reviews={reviews} 
+spotArray={spotArray} 
+user={user}
+ handleDelete={handleDelete}/>
 
 <VisitedSpots myReviews={myReviews} user={user} />
     </div>

@@ -1,11 +1,16 @@
 import React, {useState} from 'react'
 import Signup from './Signup';
 import {useHistory} from 'react-router-dom'
+// import { useNavigate } from "react-router-dom"
 
-function Login({onLogin}) {
+import { eachMinuteOfInterval } from 'date-fns';
+
+function Login({onLogin, setCurrentUser}) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showForm, setShowForm] = useState(false);
+  // const [currentUser, setCurrentUser] = useState({})
+
   const [error, setError] = useState([])
   let history = useHistory();
 
@@ -16,22 +21,24 @@ function toggleSignup() {
 function handleSubmit(e){
   e.preventDefault();
   const user = {
-    email,
-    password
+    email: email, 
+    password: password,
   }
   fetch("/login", {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({user}),
-  })
-  .then((r) => r.json())
-  .then((user) => { 
-    onLogin(user);
-  })
-    history.push("/spots");
-}
+    body: JSON.stringify(user),
+  }).then((response) => {
+  if (response.ok) {
+    response.json().then((user) => onLogin(user))
+
+    history.push("/")
+
+  }else alert ("no account associated with those credentials")
+})}
+console.log()
   return (
     <div className='loginPage'>
             <h1 id='minute'>A NEW YORK <br></br> MINUTE</h1>
