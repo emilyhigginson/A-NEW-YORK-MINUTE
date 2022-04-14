@@ -68,6 +68,10 @@ Favorite.create(user_id: emily.id, spot_id: Spot.last.id)
 user_id = User.ids.sample
 spot_id = Spot.ids.sample
     
+Friend.create(friender_id: emily.id,friendee_id: blair.id)
+Friend.create(friender_id: emily.id,friendee_id: lyn.id)
+Friend.create(friender_id: emily.id,friendee_id: george.id)
+Friend.create(friender_id: emily.id,friendee_id: gar.id)
    
 Review.create(user_id: emily.id, spot_id: a.id , comment: "One of the best happy hours in the city! They don't take reservations but definitely worth the wait if you need to!")
 Review.create(user_id: emily.id, spot_id:b.id , comment: "A classic for a reason. Best bagels in the East Village")

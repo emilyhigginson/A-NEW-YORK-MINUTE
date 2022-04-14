@@ -1,6 +1,7 @@
 import React from 'react'
 import Select from 'react-select'
 import MyTimer from './MyTimer'
+import {Link} from 'react-router-dom'
 
 function Filter(
   {setCategoryInput, setLocationInput, setFreeInput, handleSubmit}) {
@@ -53,6 +54,7 @@ function Filter(
         <MyTimer/>
         <h1>What's the vibe? Tell us below and we'll help you pick where to go. 
         </h1>
+        <h1>In the mood to browse?   <Link to = '/spots'> View all spots </Link> </h1>
         <form onSubmit={handleSubmit}>
         <label>What are you looking for?</label>
         <Select 

@@ -12,18 +12,20 @@ function Find({spotArray, user}) {
     function toggleResult() {
         setResultIsShowing((resultIsShowing) => !resultIsShowing)
     }
-    const filterByCategory = spotArray.filter((spot) => spot.category.toLowerCase().includes(categoryInput.toLowerCase())
+   
+    const filterByCategory = spotArray.filter((spot) => spot.category.toLowerCase().includes(categoryInput.toLowerCase()) 
     );
 
     const filterByLocation = filterByCategory.filter((spot) =>
     spot.location.toLowerCase().includes(locationInput.toLowerCase())
   );
+
 console.log(filterByLocation)
   const filterByPrice = filterByLocation.filter((spot) => {
     if ((spot.free) === freeInput) { 
       return spot 
     } else if ((spot.free === freeInput)) {
-    return null 
+    return null
     }
   });
 
