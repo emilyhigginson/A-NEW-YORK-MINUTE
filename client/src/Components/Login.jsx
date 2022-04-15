@@ -34,7 +34,7 @@ function handleSubmit(e){
   if (response.ok) {
     response.json().then((user) => onLogin(user))
 
-    history.push("/")
+    history.push("/home")
 
   }else alert ("no account associated with those credentials")
 })}

@@ -4,7 +4,7 @@ import VisitedSpots from './VisitedSpots'
 import Friends from './Friends'
 import GuestCheck from './GuestCheck'
 
-function Profile({user, spotArray, handleDelete}) {
+function Profile({user, spotArray, handleDelete, onReviewSubmit, reviewArray}) {
 const [reviews , setReviews] = useState([])
 
   useEffect(()=> {
@@ -32,6 +32,8 @@ console.log(reviews)
       </div>
       {/* <Friends user={user}></Friends> */}
 <SavedSpots 
+onReviewSubmit={onReviewSubmit} 
+reviewArray={reviewArray}
 setReviews={setReviews} 
 reviews={reviews} 
 spotArray={spotArray} 

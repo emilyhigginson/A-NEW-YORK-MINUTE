@@ -13,6 +13,7 @@ import NewSpotForm from "./NewSpotForm";
 function App() {
   const [spotArray, setSpotArray] = useState([]);
   const [currentUser, setCurrentUser] = useState({})
+  const [reviewArray, setReviewArray] = useState([])
 
   useEffect(() => {
     fetch("/me")
@@ -30,6 +31,16 @@ useEffect(()=> {
 
 function onFormSubmit(newSpot) {
   setSpotArray([newSpot, ...spotArray])
+}
+
+useEffect(()=> {
+  fetch ('/reviews')
+  .then(res => res.json())
+  .then(data => setReviewArray(data)) 
+}, [])
+
+function onReviewSubmit(newReview) {
+  setReviewArray([newReview, ...reviewArray])
 }
 console.log(currentUser)
 if (currentUser) {
@@ -57,7 +68,7 @@ if (currentUser) {
    </Route>
 
    <Route exact path='/profile'>
-   <Profile user={currentUser} spotArray={spotArray} onFormSubmit={onFormSubmit} />
+   <Profile user={currentUser} spotArray={spotArray} onFormSubmit={onFormSubmit} onReviewSubmit={onReviewSubmit} reviewArray={reviewArray} />
    </Route>
 
    <Route exact path = '/add'>

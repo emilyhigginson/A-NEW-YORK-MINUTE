@@ -51,12 +51,6 @@ const priceOptions = [
     {value: true, label: "free "},
     {value: false, label: "$$$"},
 ]
-
-  const walkinOptions = [
-    {value: false, label: "yes"},
-    {value: true, label: "no"},
-  ]
-  
   return (
     <div className='spotPage'>
 

@@ -2,18 +2,18 @@ import React, {useState, useContext} from 'react'
 import MyReviews from './GuestCheck'
 import { UserContext } from "./UserContext"
 
-function ReviewForm({reviews, setReviews, handleDelete, user, spot_id}) {
+function SavedReviewForm({reviews, setReviews, handleDelete, user_id, spot_id, onReviewSubmit, reviewArray}) {
+
+    console.log(user_id)
 
     const [comment, setComment] = useState("")
     
-    
-
     function handleSubmit(event){
       event.preventDefault();
 
         const review = {
             comment, 
-            user_id: user.id, 
+            user_id: user_id, 
             spot_id: spot_id
         }
         fetch("/reviews", {
@@ -27,8 +27,9 @@ function ReviewForm({reviews, setReviews, handleDelete, user, spot_id}) {
 
             .then((response) => response.json())
             
-            .then(review => console.log(review))
-        }
+ 
+            .then(review => console.log(review)) 
+        .then(review => onReviewSubmit(review))       }
         console.log(spot_id)
 
   return (
@@ -53,4 +54,4 @@ function ReviewForm({reviews, setReviews, handleDelete, user, spot_id}) {
   )
 }
 
-export default ReviewForm
+export default SavedReviewForm

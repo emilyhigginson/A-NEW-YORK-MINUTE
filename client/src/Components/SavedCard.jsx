@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReviewForm from './ReviewForm'
-
-function SavedCard({ setReviews, handleDelete, user, reviews, id, name, location, category, image }) {
+import SavedReviewForm from './SavedReveiwForm'
+function SavedCard({ setReviews, handleDelete, user_id, reviews, id, name, location, category, image, reviewArray, onReviewSubmit }) {
   
   const [formIsShowing, setFormIsShowing] = useState(true)
 
@@ -21,7 +21,8 @@ function SavedCard({ setReviews, handleDelete, user, reviews, id, name, location
           <button className='button' onClick={() => handleDelete}> ★ Unsave </button>
           <button className='button' onClick={toggleReviewForm} > Been here? Write a Review </button>
         </div>
-        {formIsShowing ? null : <ReviewForm  spot_id={id} user={user} />}
+        {formIsShowing ? null : <SavedReviewForm onReviewSubmit={onReviewSubmit} 
+reviewArray={reviewArray} spot_id={id} user_id={user_id} />}
 
       </div>
 
