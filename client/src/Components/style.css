@@ -25,33 +25,38 @@
     font-size: 30px;
     display: flex;
     flex-direction: row;
-    color: #ff1b8d;
+    justify-content: space-between;
+    color: #9ec4ea;
     padding: 5px;
     height: 10vh;
-    background: rgba(255, 255, 255, 0.9);
     z-index: 10;
-
 }
 
 #links {
     padding-top: 30px;
     padding-left: 10px;
-    color: #ff1b8d;
+    color: #9ec4ea;
     text-decoration: none;
     background: rgba(255, 255, 255, 0.9);
     z-index: 10;
 }
-
+#logout{
+    border: none; 
+    padding: 5px;
+    margin: 5px;
+}
 #link {
-    padding-bottom: 20px;
-    color: #ff1b8d;
+    /* padding-bottom: 20px; */
+    color: #9ec4ea;
     text-decoration: none;
     align-content: right;
-    z-index: 10;
+    padding-top: 30px;
+    padding-left: 10px;
+    /* z-index: 10; */
 }
 
 #links:visited {
-    color: #ff1b8d;
+    color: #9ec4ea;
     text-decoration: none;
 }
 
@@ -60,8 +65,8 @@
 }
 
 .loginPage {
-
-    background-image: url("https://wallpaperbat.com/img/81402-other-new-york-city-black-white-photography-wallpaper-picture-hd.jpg");
+    /* background-image: url("https://wallpaperbat.com/img/81402-other-new-york-city-black-white-photography-wallpaper-picture-hd.jpg"); */
+    background-image: url('https://www.carlylepropertymanagement.com/wp-content/uploads/2021/02/Depositphotos_11683989_s-2019.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,7 +77,9 @@
 
 }
 .homepage{
-    background-image: url("https://wallpaperbat.com/img/81402-other-new-york-city-black-white-photography-wallpaper-picture-hd.jpg");
+    /* background-image: url("https://wallpaperbat.com/img/81402-other-new-york-city-black-white-photography-wallpaper-picture-hd.jpg"); */
+    background-image: url('https://www.carlylepropertymanagement.com/wp-content/uploads/2021/02/Depositphotos_11683989_s-2019.jpg');
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,7 +98,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     margin-top: 70px;
     align-items: center;
     justify-content: center;
@@ -123,7 +129,7 @@
 
 .search {
     position: absolute;
-    top: 1rem;
+    top: 50rem;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -140,10 +146,39 @@
 }
 
 .allSpots {
-    /* background-image: url('https://i.pinimg.com/originals/bf/02/06/bf0206077ce7b17459f2a0d794bc4969.jpg'); */
+    background-color: #ccdfe9;
+     
+}
+.allSpotsHeader{
+    background-image: url('https://afar-production.imgix.net/uploads/images/afar_post_headers/images/glwJNUpGrq/original_shutterstock_1143060998.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh; 
+    justify-content: center;
+    display: flex;
+    text-align: center;
 
 }
+#spotsHeader{
+    background-color: white;
+    padding: 40px;
+    width: 45vh; 
+    height: 15vh;
+    /* opacity: .8; */
+    margin-top: 180px;
+    margin-right: 750px;
+}
 
+#newspotcontainer{
+    display: flex;
+}
+#newform{
+    justify-content: center;
+    padding: 10px;
+display: flex;
+flex-direction: column;
+}
 .spotPage {
     justify-content: center;
     align-items: center;
@@ -153,31 +188,46 @@
     flex-wrap: wrap;
     text-align: center;
     padding: 70px;
+    background-image: url('https://pbs.twimg.com/media/D4ws96nWsAEJRXW?format=jpg&name=large');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh; 
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: white;
+
+    /* background-color: #fffec6; */
+}
+#newspotSearchbar{
+    position: absolute;
+    
+    margin-top: 180px;
+    margin-right: 750px;
 }
 
 #spotCard {
     position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     max-width: 75%;
     margin: 20px;
     padding: 20px;
-    border: 2px solid #a4a4a4;
+    border: 3px solid #a4a4a4;
     border-radius: 10px;
-    background-color: white;
+    background-color: #f2f2f2;
     /* background-color: #f2f2f2; */
 
 }
 
-/* #filterMap {
-    align-content: right;
-    margin-left: 10px;
-    width: 300px;
-} */
-
 #locationName {
     background-color: WHITE;
-    color: #1bb2ff;
+    color: #96beea;
     position: absolute;
     text-transform: uppercase;
     top: 315px;
@@ -204,7 +254,7 @@
     padding: 10px;
     margin: 10px;
     color: white;
-    background-color: #ff1b8d;
+    background-color: #febfb2;
     border-radius: 10px;
     font-size: 20px;
     font-weight: 300;
@@ -215,7 +265,7 @@
     padding: 10px;
     margin: 10px;
     color: white;
-    background-color: #1bb2ff;
+    background-color: #96beea;
     border-radius: 10px;
     font-size: 20px;
     font-weight: 400;
@@ -226,7 +276,7 @@
 #categoryChild3 {
     padding: 10px;
     margin: 10px;
-    background-color: #ffd900;
+    background-color: #fffc96;
     border-radius: 10px;
     border: none;
     font-size: 20px;
@@ -239,7 +289,7 @@
     padding: 10px;
     margin: 10px;
     color: black;
-    background-color: #ffd900;
+    background-color: #fffc96;
     border-radius: 10px;
     border: none;
 
@@ -252,6 +302,8 @@
     align-content: center;
     display: flex;
     flex-wrap: wrap;
+    background-color: none;
+    margin: 0px;
 }
 
 .homeContainer {
@@ -259,7 +311,7 @@
     flex-wrap: wrap;
     padding: 30px;
     margin: 10px;
-    width: 80%;
+    width: 100%;
     justify-content: center;
     align-content: center;
     background-color: none;
@@ -267,25 +319,26 @@
 #homeLink{
     text-decoration: none;
     font-size: 22px;
-    height: 480px;
-
+    height: 450px;
+    width: 400px;
 
 }
 
 .homeDiv {
-
     margin: 20px;
     justify-content: center;
     align-content: center;
     text-align: center;
-    width: 400px;
+    justify-content: space-between;
+    width: 300px;
     padding: 20px;
     border-radius: 10%;
-    background-color: black;
+    background-color: #9fc4e9;
     color: white;
-    height: 450px;
+    height: 300px;
     opacity: .9;
-
+    display: flex;
+    flex-direction: row;
 
 }
 
@@ -298,18 +351,50 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+#saveheader{
+font-size: 50px ;
+background-color: white;
+color: #9fc4e9;
+opacity: .8;
+width: 1100px;
 
 }
 #welcome{
     padding-top: 20px;
     font-size: 50px;
+
 }
 #profileHeader{
     display: flex;
-    flex-direction: row;
-}
+    flex-direction: column;
+        background-image: url('https://images.squarespace-cdn.com/content/v1/588ec6aaa5790aa54e693929/1590528705566-A7OTX0XSHDZ74MGMV3O6/NYC+subway+station?format=1500w');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        height: 80vh; 
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        color: white;
+
+    }
+    #searchHeader{
+        display: flex;
+        flex-direction: row;
+        
+            background-image: url('https://cupofjo.com/wp-content/uploads/2011/09/how-to-flag-nyc-taxi-cab-photo.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            height: 80vh; 
+            justify-content: center;
+            display: flex;
+            text-align: center;
+            color: white;
+        }
 .button{
-    background-color: #ffd900;
+    background-color: #fffc96;
     font-size: 20px;
     border: none;
     border-radius: 10px;
@@ -320,7 +405,18 @@
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    
+    background-color: #febfb2;
+    height: 90vh;
+}
+#reviewsContainer{
+    height: 90vh;
+}
+#savedHeader{
+    background-color: #febfb2;
+    color: white;
+    margin: 0px;
+    padding: 20px;
+
 }
 #savedCategoryChild1{
     padding: 10px;

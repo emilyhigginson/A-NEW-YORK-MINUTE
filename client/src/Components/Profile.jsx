@@ -3,6 +3,7 @@ import SavedSpots from './SavedSpots'
 import VisitedSpots from './VisitedSpots'
 import Friends from './Friends'
 import GuestCheck from './GuestCheck'
+import {Link } from 'react-scroll'
 
 function Profile({user, spotArray, handleDelete, onReviewSubmit, reviewArray}) {
 const [reviews , setReviews] = useState([])
@@ -29,6 +30,8 @@ console.log(reviews)
       <div id="profileHeader">
       {/* <img id= 'avatar' src= {user.avatar} /> */}
       <h1 id='welcome'> Welcome back, {user.username}! </h1>
+      <Link  className='link' to= "test1" spy={true} smooth={true} offset={0} duration={500} >   Saved Spots </Link>
+      <Link  className='link' to= "test2" spy={true} smooth={true} offset={0} duration={500} >   Reviewed Spots </Link>
       </div>
       {/* <Friends user={user}></Friends> */}
 <SavedSpots 

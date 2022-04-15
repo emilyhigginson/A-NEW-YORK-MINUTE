@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Review from './Review'
 import Spotmap from './Spotmap'
 
-function FilterCard({id, name, location, category, walkin, image, price, reviews, lat, lng}) {
+function FilterCard({id, name, location, category, image, price, reviews, lat, lng}) {
   const [showReviews, setShowReviews] = useState(false);
 
 function toggleReviews() {

@@ -66,7 +66,7 @@ export default function Map({setLat, setLng, lat, lng}) {
         <>
         <div id= 'mapbox'>
             <br></br>
-            <Search panTo={panTo} />
+
 
             <GoogleMap mapContainerStyle={mapContainerStyle}
                 zoom={14}
@@ -87,6 +87,8 @@ export default function Map({setLat, setLng, lat, lng}) {
                 {markers.map(marker => <Marker key={marker.lat} position={{lat: marker.lat, lng: marker.lng}}/>)}
                 {/* options={options}  */}
             </GoogleMap>
+            <Search style={{top: '300px'}} panTo={panTo} />
+
         </div>
         
         </>

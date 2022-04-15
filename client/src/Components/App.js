@@ -21,8 +21,6 @@ function App() {
       .then(setCurrentUser)
   }, [])
 
-console.log(currentUser)
-
 useEffect(()=> {
   fetch ('/spots')
   .then(res => res.json())

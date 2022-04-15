@@ -7,7 +7,6 @@ function Find({spotArray, user}) {
     const [locationInput, setLocationInput] =useState("")
     const [freeInput, setFreeInput] =useState(false)
     const [resultIsShowing, setResultIsShowing] = useState(true)
-    // const [isClicked, setIsClicked] = useState(false)
    
     function toggleResult() {
         setResultIsShowing((resultIsShowing) => !resultIsShowing)

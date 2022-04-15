@@ -15,7 +15,7 @@ const [mySaved, setMySaved] = useState([])
 
 function handleDelete(id) {
   fetch(`/favorites/${id}`, {
-    
+  
     method: "DELETE",
     
   }).then((r) => {
@@ -36,8 +36,8 @@ const favs = mySaved.map((spot) => <SavedCard setReviews={setReviews} onReviewSu
 
 // const favs = favoritos.map((spot) => <SavedCard setReviews={setReviews} reviews={reviews} handleDelete= {handleDelete} user_id={user.id} key={spot.id} name={spot.name} location={spot.location} category={spot.category} image={spot.image} id={spot.id} lat={spot.lat} lng={spot.lng}/>)
   return (
-    <div>
-    <h1> Here are the spots you've saved:</h1>
+    <div name="test1">
+    <h1 id= 'savedHeader'> Here are the spots you've saved:</h1>
     <div className='savedContainer'>
 {favs} 
 </div>

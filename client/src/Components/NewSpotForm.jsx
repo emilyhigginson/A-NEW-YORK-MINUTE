@@ -52,14 +52,18 @@ const priceOptions = [
     {value: false, label: "$$$"},
 ]
   return (
+    <>
     <div className='spotPage'>
 
-    
-      <Map setLng={setLng} setLat={setLat} />
-      <h1>No Gatekeeping Here!
+<h1 id = "saveheader">No Gatekeeping Here! <br></br>
         Add your favorite NYC spot so others can experience it too!
       </h1>
-      <form onSubmit={handleSubmit}>
+      </div>
+      <div id ='newspotcontainer'> 
+      <div>
+      <Map setLng={setLng} setLat={setLat} />
+     </div>
+      <form id='newform' onSubmit={handleSubmit}>
         <label> Name: </label>
         <input
           type="text"
@@ -121,7 +125,9 @@ const priceOptions = [
         <strong>Enter!</strong>
     </button>
       </form>
+    
     </div>
+    </>
   )
 }
 
