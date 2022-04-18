@@ -7,7 +7,7 @@ function AllSpots({ spotArray, user }) {
   return (
     <div className='allSpots'>
 <div className='allSpotsHeader'>
-      <h1 id='spotsHeader'> THE BEST SPOTS <br></br>IN NYC  </h1>
+      <h1 id='spotsHeader'> OUR USERS' FAVORITE <br></br> SPOTS IN NYC  </h1>
       </div>
       {spots}
       </div>
