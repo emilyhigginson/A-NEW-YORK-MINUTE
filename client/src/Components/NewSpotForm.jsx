@@ -56,7 +56,7 @@ const priceOptions = [
     <div className='spotPage'>
 
 <h1 id = "saveheader">No Gatekeeping Here! <br></br>
-        Add your favorite NYC spot so others can experience it too!
+        Add your favorite NYC spot! 
       </h1>
       </div>
       <div id ='newspotcontainer'> 

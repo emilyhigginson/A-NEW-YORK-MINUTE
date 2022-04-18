@@ -4,6 +4,7 @@ import VisitedSpots from './VisitedSpots'
 import Friends from './Friends'
 import GuestCheck from './GuestCheck'
 import {Link } from 'react-scroll'
+import ReviewedMap from './ReviewedMap'
 
 function Profile({user, spotArray, handleDelete, onReviewSubmit, reviewArray}) {
 const [reviews , setReviews] = useState([])
@@ -55,8 +56,8 @@ reviews={reviews}
 spotArray={spotArray} 
 user={user}
  handleDelete={handleDelete}/>
-
-<VisitedSpots myReviews={myReviews} user={user} />
+{/* <ReviewedMap reviews={reviews}/> */}
+<VisitedSpots myReviews={myReviews} user={user}  />
     </div>
   )
 }

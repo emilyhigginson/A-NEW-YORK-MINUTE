@@ -6,7 +6,15 @@ class Review < ApplicationRecord
         self.spot.name
       end
 
-      def username 
+      def author 
         self.user.username
+      end
+
+      def latitude 
+        self.spot.lat
+      end
+
+      def longitude 
+        self.spot.lng
       end
 end

@@ -11,11 +11,12 @@ function Review({reviews, id}) {
       
   //     }
   // )
+  console.log(reviews)
 
-  const comment = reviews.map(review => <li>{review.comment}</li>)
-console.log(comment)
+  const comment = reviews.map(review => <li id= 'reviewComment'>{review.comment}</li>)
     return (
     <div>
+      Reviews:
         {comment}
     </div>
   )

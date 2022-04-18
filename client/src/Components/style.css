@@ -40,11 +40,13 @@
     background: rgba(255, 255, 255, 0.9);
     z-index: 10;
 }
-#logout{
-    border: none; 
+
+#logout {
+    border: none;
     padding: 5px;
     margin: 5px;
 }
+
 #link {
     /* padding-bottom: 20px; */
     color: #9ec4ea;
@@ -76,7 +78,8 @@
     top: 20%;
 
 }
-.homepage{
+
+.homepage {
     /* background-image: url("https://wallpaperbat.com/img/81402-other-new-york-city-black-white-photography-wallpaper-picture-hd.jpg"); */
     background-image: url('https://www.carlylepropertymanagement.com/wp-content/uploads/2021/02/Depositphotos_11683989_s-2019.jpg');
 
@@ -85,6 +88,7 @@
     background-size: cover;
     height: 100vh;
 }
+
 #minute {
     font-family: 'Bungee Shade', cursive;
     color: white;
@@ -95,7 +99,7 @@
     padding-top: 60px;
 }
 
-#minuteDiv{
+#minuteDiv {
     text-align: center;
     align-items: center;
     /* padding-left: 100px; */
@@ -104,7 +108,8 @@
 
     justify-content: center;
 }
-#filterDiv{
+
+#filterDiv {
     text-align: center;
     align-items: center;
     /* padding-left: 100px; */
@@ -112,12 +117,14 @@
     margin-right: 100px;
     justify-content: center;
 }
-#filterButton{
-justify-content: center;
-text-align: center;
-margin-left: 47%; 
-margin-top: 20px;
+
+#filterButton {
+    justify-content: center;
+    text-align: center;
+    margin-left: 47%;
+    margin-top: 20px;
 }
+
 .loginDiv {
     position: absolute;
     top: 50%;
@@ -137,6 +144,11 @@ margin-top: 20px;
     color: #d04d23;
 }
 
+#reviewComment {
+    font-size: 16px;
+    font-weight: 200;
+
+}
 
 #leftCard {
     width: 540px;
@@ -172,50 +184,57 @@ margin-top: 20px;
 
 .allSpots {
     background-color: #ccdfe9;
-     
+
 }
-.allSpotsHeader{
-    background-image: url('https://afar-production.imgix.net/uploads/images/afar_post_headers/images/glwJNUpGrq/original_shutterstock_1143060998.jpg');
+
+.allSpotsHeader {
+    background-image: url('https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&w=1000&q=80');
     background-repeat: no-repeat;
     background-size: cover;
     /* opacity: .8; */
+    font-family: 'Bungee Shade', cursive;
 
     background-attachment: fixed;
     background-position: center;
-    height: 80vh; 
+    height: 80vh;
     justify-content: center;
     display: flex;
     text-align: center;
 
 
 }
-#spotsHeader{
-    /* background-color: white; */
-    padding: 40px;
-    width: 45vw; 
-    color: black;
+
+#spotsHeader {
+    padding: 20px;
+    width: fit-content;
+    color: #12495a;
     font-size: 60px;
-    height: 25vh;
-    /* opacity: 1.2; */
-    margin-top: 220px;
-    margin-right: 780px;
+    height: fit-content;
+    margin-top: 240px;
+    margin-right: 1050px;
     font-weight: 40px;
+    font-family: 'Bungee Shade', cursive;
+    background-color: #ccdfe9;
+
     
+
     /* font-family: 'Bungee Shade', cursive; */
 
 }
 
-#newspotcontainer{
+#newspotcontainer {
     display: flex;
 }
-#newform{
+
+#newform {
     text-align: center;
     justify-content: center;
     padding: 10px;
-display: flex;
-flex-direction: column;
-margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
 }
+
 .spotPage {
     justify-content: center;
     align-items: center;
@@ -234,7 +253,7 @@ margin-left: 60px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 80vh; 
+    height: 80vh;
     justify-content: center;
     display: flex;
     text-align: center;
@@ -242,9 +261,10 @@ margin-left: 60px;
 
     /* background-color: #fffec6; */
 }
-#newspotSearchbar{
+
+#newspotSearchbar {
     position: absolute;
-    
+
     margin-top: 180px;
     margin-right: 750px;
 }
@@ -255,6 +275,7 @@ margin-left: 60px;
     flex-direction: row;
     justify-content: space-around;
     max-width: 75%;
+    height: fit-content;
     margin: 20px;
     padding: 20px;
     border: 3px solid #a4a4a4;
@@ -263,10 +284,22 @@ margin-left: 60px;
     /* background-color: #f2f2f2; */
 
 }
-
+#savedSpotCard{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 75%;
+    height: fit-content;
+    margin: 20px;
+    padding: 20px;
+    /* border: 3px solid #a4a4a4; */
+    border-radius: 10px;
+    background-color: #fdec8e;
+}
 #locationName {
-    background-color: WHITE;
-    color: #96beea;
+    background-color: #f2f2f2;
+    color: #fabdb3;
     position: absolute;
     text-transform: uppercase;
     top: 315px;
@@ -355,7 +388,8 @@ margin-left: 60px;
     align-content: center;
     background-color: none;
 }
-#homeLink{
+
+#homeLink {
     text-decoration: none;
     font-size: 22px;
     height: 450px;
@@ -365,7 +399,6 @@ margin-left: 60px;
 
 .homeDiv {
     margin: 20px;
-    justify-content: center;
     align-content: center;
     text-align: center;
     justify-content: space-between;
@@ -374,75 +407,82 @@ margin-left: 60px;
     border-radius: 10%;
     background-color: #9fc4e9;
     color: white;
-    height: 300px;
-    opacity: .9;
+    height: 250px;
+    opacity: .8;
+    display: flex;
+    flex-direction: row;
+}
+
+.homeDiv:hover {
+    color: #9fc4e9;
+    background-color: #fdc791;
+}
+
+
+#saveheader {
+    font-size: 50px;
+    background-color: white;
+    color: #9fc4e9;
+    padding: 20px;
+    width: fit-content;
+    color: #12495a;
+    font-size: 60px;
+    /* margin-right: 1000px; */
+    justify-content: left;
+    display: flex;
+    font-weight: 40px;
+    font-family: 'Bungee Shade', cursive;
+    background-color: #ccdfe9;
+
+}
+
+#welcome {
+    padding: 20px;
+    background-color: #9c3f31;
+    width: fit-content;
+    justify-content: center;
+    font-size: 60px;
+    color: #f1f5fc;
+    font-family: 'Bungee Shade', cursive;
+}
+
+#profileHeader {
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://images.squarespace-cdn.com/content/v1/588ec6aaa5790aa54e693929/1590528705566-A7OTX0XSHDZ74MGMV3O6/NYC+subway+station?format=1500w');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #febfb2;
+    height: 80vh;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: white;
+
+}
+
+#searchHeader {
     display: flex;
     flex-direction: row;
 
-}
-.homeDiv:hover {
-    color: black;
-    background-color: white;
-}
+    background-image: url('https://cupofjo.com/wp-content/uploads/2011/09/how-to-flag-nyc-taxi-cab-photo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
-#avatar{
-    background-image: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/socialmedia/apple/81/rat_1f400.png";
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    height: 80vh;
     justify-content: center;
-    text-align: center;
-}
-#saveheader{
-font-size: 50px ;
-background-color: white;
-color: #9fc4e9;
-opacity: .8;
-width: 1100px;
-
-}
-#welcome{
-    padding-top: 20px;
-    font-size: 50px;
-
-}
-#profileHeader{
     display: flex;
-    flex-direction: column;
-        background-image: url('https://images.squarespace-cdn.com/content/v1/588ec6aaa5790aa54e693929/1590528705566-A7OTX0XSHDZ74MGMV3O6/NYC+subway+station?format=1500w');
-        background-repeat: no-repeat;
-        background-size: cover;
+    text-align: center;
+    color: white;
+}
 
-        background-attachment: fixed;
-        background-position: center;
-        background-color: #febfb2;
-        height: 80vh; 
-        width: 100vw;
-        justify-content: center;
-        display: flex;
-        text-align: center;
-        color: white;
-
-    }
-    #searchHeader{
-        display: flex;
-        flex-direction: row;
-        
-            background-image: url('https://cupofjo.com/wp-content/uploads/2011/09/how-to-flag-nyc-taxi-cab-photo.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            background-attachment: fixed;
-            background-position: center;
-            height: 80vh; 
-            justify-content: center;
-            display: flex;
-            text-align: center;
-            color: white;
-        }
-.button{
+.button {
     background-color: #fffc96;
     font-size: 20px;
     border: none;
@@ -450,27 +490,44 @@ width: 1100px;
     margin-right: 10px;
 
 }
-.savedContainer{
+
+.savedContainer {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
     background-color: #febfb2;
-    height: 90vh;
+    height: 70vh;
 }
-#reviewsContainer{
-    height: 90vh;
+
+#reviewsContainer {
+    /* height: 90vh; */
+    background-color: #feec8e
+
 }
-#savedHeader{
+
+#savedHeader {
     background-color: #febfb2;
     color: white;
     margin: 0px;
     padding: 20px;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 40px;
+
 
 }
-#savedCategoryChild1{
+#reviewedHeader{
+    background-color: #fdec8e;
+    color: white;
+    margin: 0px;
+    padding: 20px;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 40px;
+}
+
+#savedCategoryChild1 {
     padding: 10px;
     margin: 10px;
-    color:#ff1b8d;
+    color: #9fc4e9;
     background-color: white;
     left: 10px;
     font-size: 20px;
@@ -479,20 +536,22 @@ width: 1100px;
     top: 337px;
 
 }
-#savedCategoryChild2{
+
+#savedCategoryChild2 {
     top: 337px;
     position: absolute;
     left: 150px;
     background-color: white;
     padding: 10px;
     margin: 10px;
-    color: #1bb2ff;
+    color: #fcbfb2;
     font-size: 20px;
     font-weight: 300;
 }
+
 #savedLocationName {
-    background-color: WHITE;
-    color: #1bb2ff;
+    background-color:#fdec8e;
+    color: black;
     position: absolute;
     text-transform: uppercase;
     /* top: 315px; */
@@ -508,41 +567,45 @@ width: 1100px;
     /* border-radius: 8px; */
 
 }
-#buttonDiv{
+
+#buttonDiv {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
     /* padding: 15px; */
     padding-right: 20px;
 }
-#reviewContainer{
+
+#reviewContainer {
     display: flex;
-    overflow-x: scroll;
+    overflow-y: scroll;
     justify-content: space-between;
-    /* flex-direction: row; */
+    height: 100vh;
 }
 
-#check{
+#check {
+
     /* display: flex; */
     /* flex-direction: column; */
-    background-image: url('https://i.pinimg.com/originals/0a/60/1b/0a601bb8d8714df9a246c05e4b98fdd5.jpg');
+    /* align-content: space-around; */
+  
+    /* background-image: url('https://i.pinimg.com/originals/0a/60/1b/0a601bb8d8714df9a246c05e4b98fdd5.jpg');
     opacity: .8;
     height: 470px;
     width: 250px;
-    margin: 10px;
+    margin: 10px; */
 }
 
-#checkContent{
-    font-family: 'Kalam', cursive;
+#checkContent {
     justify-content: center;
     text-align: center;
+    padding: 20px;
     font-weight: bolder;
     font-size: 20px;
-    padding-top: 90px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #b9e1cf, .09;
+    border: 3px solid #a4a4a4;
+    width: 264px;
     height: fit-content;
-    line-height: 20px
-    /* z-index: 10; */
+    margin: 20px;
+    
+        /* z-index: 10; */
 }

@@ -5,4 +5,5 @@ class Spot < ApplicationRecord
     has_many :favorited_by, through: :favorites, source: :user #user who faved
 
     validates :name, uniqueness: true
+
 end

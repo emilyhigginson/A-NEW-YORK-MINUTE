@@ -14,10 +14,10 @@ function Header({ onLogout, currentUser, setCurrentUser }) {
     <div className='navbar' >
         <Route>
         <NavLink id='link' exact to='/home'> A New York Minute  </NavLink>
-        <NavLink id='links' exact to='/spots'> Browse </NavLink>
-        <NavLink id='links' exact to='/profile'> Profile </NavLink>
-        <NavLink id='links' exact to='/add'>Add a Spot</NavLink>
-        <NavLink id='links' exact to='/search'> Search </NavLink>
+        <NavLink id='links' exact to='/spots'> 🗽 Browse </NavLink>
+        <NavLink id='links' exact to='/profile'>  🏙 Profile </NavLink>
+        <NavLink id='links' exact to='/add'> 🥂 Add a Spot</NavLink>
+        <NavLink id='links' exact to='/search'> 🚕 Search </NavLink>
         </Route>
         <button id= 'logout' onClick={handleLogout}>Logout </button>
 
