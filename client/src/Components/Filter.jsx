@@ -52,9 +52,12 @@ function Filter(
   return (
     <div>
         <MyTimer/>
-        <h1> Life moves fast. Why waste any time deciding what to do? Tell us what you're looking for and we'll help you pick where to go. 
+        <div id= 'minuteDiv'>
+        <h1> Life moves fast. Why waste any time deciding what to do? <br></br> Tell us what you're looking for and we'll help you pick where to go. 
         </h1>
         <h1> Want to see all of your options?   <Link to = '/spots'> View all spots here </Link> </h1>
+        </div>
+        <div id= 'filterDiv'>
         <form onSubmit={handleSubmit}>
         <label>What are you looking for?</label>
         <Select 
@@ -77,6 +80,7 @@ function Filter(
         onChange={handleFreeChange}
         />
         </form>
+        </div>
     </div>
   )
 }

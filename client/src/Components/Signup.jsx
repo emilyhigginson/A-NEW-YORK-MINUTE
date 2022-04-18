@@ -86,18 +86,18 @@ function Signup() {
                         />
                     </label>
                     <br></br>
-                    <label> Choose an avatar </label>
+                    {/* <label> Choose an avatar </label> */}
                     <br></br>
-                    <Select
+                    {/* <Select
                         options={avatarOptions}
                         placeholder="Choose an avatar"
                         onChange={(e) => setAvatar(e.value)}
-                    />
+                    /> */}
                     <button
                         type="submit"
                         value="Join!"
                         className="submit">
-                        <strong>Enter!</strong>
+                        <strong>Let's go!</strong>
                     </button>
                 </form>
             </div>

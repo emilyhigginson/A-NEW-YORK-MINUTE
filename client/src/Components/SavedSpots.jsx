@@ -13,26 +13,27 @@ const [mySaved, setMySaved] = useState([])
   }, [])
 // console.log(mySaved)
 
-function handleDelete(id) {
+function handleFavoriteDelete(id) {
   fetch(`/favorites/${id}`, {
-  
     method: "DELETE",
-    
   }).then((r) => {
     if (r.ok) {
-      setMySaved((saved) =>
-        saved.filter((saved) => saved.id !== id)
+      setMySaved((spots) =>
+        spots.filter((saved) => saved.id !== id)
+        
       );
+     
     }
   });
 }
-console.log(user.favorite_spots)
-const favoritos = user.favorite_spots 
+// console.log(mySaved)
+// console.log(user.favorite_spots)
+// const favoritos = user.favorite_spots 
 
-console.log(favoritos)
+// console.log(favoritos)
 
 // console.log(mySaved)
-const favs = mySaved.map((spot) => <SavedCard setReviews={setReviews} onReviewSubmit={onReviewSubmit} reviews={reviews} handleDelete= {handleDelete} user_id={user.id} key={spot.id} name={spot.spot_name} location={spot.spot_location} category={spot.spot_category} image={spot.spot_image} id={spot.spot_id} lat={spot.spot_lat} lng={spot.spot_lng} />)
+const favs = mySaved.map((spot) => <SavedCard setReviews={setReviews} onReviewSubmit={onReviewSubmit} reviews={reviews} handleDelete= {handleDelete} handleFavoriteDelete={handleFavoriteDelete} user_id={user.id} key={spot.id} name={spot.spot_name} location={spot.spot_location} category={spot.spot_category} image={spot.spot_image} id={spot.spot_id} lat={spot.spot_lat} lng={spot.spot_lng} />)
 
 // const favs = favoritos.map((spot) => <SavedCard setReviews={setReviews} reviews={reviews} handleDelete= {handleDelete} user_id={user.id} key={spot.id} name={spot.name} location={spot.location} category={spot.category} image={spot.image} id={spot.id} lat={spot.lat} lng={spot.lng}/>)
   return (

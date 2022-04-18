@@ -2,9 +2,7 @@ import React, {useState, useContext} from 'react'
 import MyReviews from './GuestCheck'
 import { UserContext } from "./UserContext"
 
-function SavedReviewForm({reviews, setReviews, handleDelete, user_id, spot_id, onReviewSubmit, reviewArray}) {
-
-    console.log(user_id)
+function SavedReviewForm({reviews, setReviews, handleFavoriteDelete, handleDelete, user_id, spot_id, onReviewSubmit, reviewArray}) {
 
     const [comment, setComment] = useState("")
     
@@ -30,7 +28,6 @@ function SavedReviewForm({reviews, setReviews, handleDelete, user_id, spot_id, o
  
             .then(review => console.log(review)) 
         .then(review => onReviewSubmit(review))       }
-        console.log(spot_id)
 
   return (
     <div>
@@ -43,7 +40,7 @@ function SavedReviewForm({reviews, setReviews, handleDelete, user_id, spot_id, o
           onChange={(e) => setComment(e.target.value)}
         />
 
- <button onClick={handleDelete}
+ <button onClick={handleFavoriteDelete}
         type="submit"
         name="submit"
        > 

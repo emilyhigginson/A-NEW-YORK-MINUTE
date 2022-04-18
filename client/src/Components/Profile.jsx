@@ -14,6 +14,19 @@ const [reviews , setReviews] = useState([])
     .then(data => setReviews(data)) 
   }, [])
 
+  function handleDelete(id) {
+    fetch(`/reviews/${id}`, {
+      method: "DELETE",
+    }).then((r) => {
+      if (r.ok) {
+        setReviews((reviews) =>
+          reviews.filter((review) => review.id !== id)
+          
+        );
+        console.log(reviews)
+      }
+    });
+  }
 console.log(reviews)
 
   const myReviews= reviews.map(review => {

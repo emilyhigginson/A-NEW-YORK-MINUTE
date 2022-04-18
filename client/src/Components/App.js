@@ -74,7 +74,7 @@ if (currentUser) {
    </Route>
 
    <Route exact path ='/search'>
-   <Find user={currentUser} spotArray={spotArray}/>
+   <Find user={currentUser} reviews={reviewArray} spotArray={spotArray}/>
    </Route>
 
    </Switch>

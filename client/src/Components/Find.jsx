@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Filter from './Filter';
 import FilterContainer from './FilterContainer';
 
-function Find({spotArray, user}) {
+function Find({spotArray, user, reviews}) {
     const [categoryInput, setCategoryInput] = useState("")
     const [locationInput, setLocationInput] =useState("")
     const [freeInput, setFreeInput] =useState(false)
@@ -19,7 +19,6 @@ function Find({spotArray, user}) {
     spot.location.toLowerCase().includes(locationInput.toLowerCase())
   );
 
-console.log(filterByLocation)
   const filterByPrice = filterByLocation.filter((spot) => {
     if ((spot.free) === freeInput) { 
       return spot 
@@ -33,8 +32,8 @@ console.log(filterByLocation)
       {/* <button onClick={returnRandom()}></button> */}
       
         <Filter setCategoryInput={setCategoryInput} setLocationInput={setLocationInput} setFreeInput={setFreeInput}/>
-        <button onClick={toggleResult} > Show Result </button>
-        {resultIsShowing ? null :  <FilterContainer user={user} spots={filterByPrice}/>}
+        <button id = 'filterButton' onClick={toggleResult} > Show Result </button>
+        {resultIsShowing ? null :  <FilterContainer user={user} reviews= {reviews} spots={filterByPrice}/>}
        
     </div>
   )

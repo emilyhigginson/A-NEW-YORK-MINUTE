@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ReviewForm from './ReviewForm'
 import SavedReviewForm from './SavedReveiwForm'
-function SavedCard({ setReviews, handleDelete, user_id, reviews, id, name, location, category, image, reviewArray, onReviewSubmit }) {
+function SavedCard({ setReviews, handleDelete, handleFavoriteDelete, user_id, reviews, id, name, location, category, image, reviewArray, onReviewSubmit }) {
   
   const [formIsShowing, setFormIsShowing] = useState(true)
 
@@ -18,10 +18,10 @@ function SavedCard({ setReviews, handleDelete, user_id, reviews, id, name, locat
         <h3 id="savedCategoryChild1" >{category} </h3>
         <h3 id="savedCategoryChild2"> {location} </h3>
         <div id='buttonDiv'>
-          <button className='button' onClick={() => handleDelete}> ★ Unsave </button>
+          <button className='button' onClick={() => handleFavoriteDelete}> ★ Unsave </button>
           <button className='button' onClick={toggleReviewForm} > Been here? Write a Review </button>
         </div>
-        {formIsShowing ? null : <SavedReviewForm onReviewSubmit={onReviewSubmit} 
+        {formIsShowing ? null : <SavedReviewForm handleFavoriteDelete={handleFavoriteDelete} onReviewSubmit={onReviewSubmit} 
 reviewArray={reviewArray} spot_id={id} user_id={user_id} />}
 
       </div>
