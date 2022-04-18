@@ -15,21 +15,22 @@ function MyTimer({ expiryTimestamp }) {
 
   return (
     <div style={{textAlign: 'center'}}>
-      <h1>Your New York Minute: </h1>
+      <h1 id='timer'>Your New York Minute: </h1>
 
-      <div style={{fontSize: '100px'}}>
+      <div id='timer' style={{fontSize: '100px'}}>
         <span>{minutes}</span>:<span>{seconds}</span>
       </div>
-      <p>{isRunning ? 'Time is Ticking' : 'Time is up!'}</p>
+      {/* <p>{isRunning ? 'Time is Ticking' : 'Time is up!'}</p> */}
       {/* <button onClick={start}>Start</button>
       <button onClick={pause}>Pause</button>
       <button onClick={resume}>Resume</button> */}
-      <button onClick={() => {
+      {/* <button onClick={() => {
         // Restarts to 5 minutes timer
         const time = new Date();
         time.setSeconds(time.getSeconds() + 60);
         restart(time)
-      }}>One more minute</button>
+      }}>
+        One more minute</button> */}
     </div>
   );
 }

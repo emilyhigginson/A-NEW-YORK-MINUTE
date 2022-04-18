@@ -11,18 +11,18 @@ function SavedCard({ setReviews, handleDelete,favoriteId, handleFavoriteDelete, 
 console.log(favoriteId)
   return (
 
-    <div id='savedSpotCard'>
+    <div id='spotCard'>
       <div id='leftCard'>
-        <h1 id='savedLocationName'>{name}</h1>
+        <h1 id='locationName'>{name}</h1>
         <img id="spotimage" style={{ "width": "500px" }} src={image} />
-        <h3 id="savedCategoryChild1" >{category} </h3>
-        <h3 id="savedCategoryChild2"> {location} </h3>
+        <h3 id="categoryChild1" >{category} </h3>
+        <h3 id="categoryChild2"> {location} </h3>
         <div id='buttonDiv'>
           <button className='button' onClick={() => handleFavoriteDelete(favoriteId)}> ★ Unsave </button>
           <button className='button' onClick={toggleReviewForm} > Been here? Write a Review </button>
         </div>
-        {formIsShowing ? null : <SavedReviewForm  onReviewSubmit={onReviewSubmit} 
-reviewArray={reviewArray} spot_id={id} user_id={user_id} />}
+        {formIsShowing ? null : <SavedReviewForm  onReviewSubmit={onReviewSubmit} handleFavoriteDelete={handleFavoriteDelete}
+reviewArray={reviewArray} favoriteId={favoriteId} spot_id={id} user_id={user_id} />}
 
       </div>
 

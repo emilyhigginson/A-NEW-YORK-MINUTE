@@ -28,13 +28,12 @@ function Find({spotArray, user, reviews}) {
   });
 
   return (
-    <div>
+    <div className='filterPage'>
       {/* <button onClick={returnRandom()}></button> */}
       
         <Filter setCategoryInput={setCategoryInput} setLocationInput={setLocationInput} setFreeInput={setFreeInput}/>
-        <button id = 'filterButton' onClick={toggleResult} > Show Result </button>
+        <button id = 'filterButton' onClick={toggleResult} > Show Result! </button>
         {resultIsShowing ? null :  <FilterContainer user={user} reviews= {reviews} spots={filterByPrice}/>}
-       
     </div>
   )
 }

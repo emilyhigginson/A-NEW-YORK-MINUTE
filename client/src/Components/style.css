@@ -116,13 +116,26 @@
     margin-left: 100px;
     margin-right: 100px;
     justify-content: center;
+    color: #7e6e68;
+    background-color: #fee3cd;
+    padding: 10px;
+    font-size: 20px;
 }
-
+#timer{
+    color: white
+}
 #filterButton {
     justify-content: center;
     text-align: center;
     margin-left: 47%;
     margin-top: 20px;
+    background-color: #94abb9;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 18px;
+    border-radius: 10px;
+    border: 2px, solid white;
 }
 
 .loginDiv {
@@ -274,7 +287,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    max-width: 75%;
+    max-width: fit-content;
     height: fit-content;
     margin: 20px;
     padding: 20px;
@@ -438,26 +451,27 @@
 
 #welcome {
     padding: 20px;
-    background-color: #9c3f31;
+    background-color: #dacfda;
     width: fit-content;
-    justify-content: center;
+    /* text-align: center; */
+    /* justify-content: center; */
+    align-items: center;
+    display: flex;
     font-size: 60px;
     color: #f1f5fc;
     font-family: 'Bungee Shade', cursive;
 }
 
 #profileHeader {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
-    background-image: url('https://images.squarespace-cdn.com/content/v1/588ec6aaa5790aa54e693929/1590528705566-A7OTX0XSHDZ74MGMV3O6/NYC+subway+station?format=1500w');
+    background-image: url('https://www.teahub.io/photos/full/0-3993_new-york-computer-backgrounds.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-
     background-attachment: fixed;
     background-position: center;
-    background-color: #febfb2;
     height: 80vh;
-    width: 100vw;
+    /* width: 100vw; */
     justify-content: center;
     display: flex;
     text-align: center;
@@ -495,19 +509,19 @@
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    background-color: #febfb2;
+    background-color: #f2f2f2;
     height: 70vh;
 }
 
 #reviewsContainer {
     /* height: 90vh; */
-    background-color: #feec8e
+    background-color: #f2f2f2
 
 }
 
 #savedHeader {
-    background-color: #febfb2;
-    color: white;
+    background-color: #f2f2f2;
+    color: #beb6c4;
     margin: 0px;
     padding: 20px;
     font-family: 'Bungee Shade', cursive;
@@ -515,9 +529,28 @@
 
 
 }
+#minuteCaption{
+    font-size: 40px;
+    padding-top: 30px;
+    /* background-color: #fce2d3; */
+    
+}
+#filterContainer{
+    background-color: #f1d4ba;
+}
+.filterPage{
+background-image: url('https://media.timeout.com/images/101705309/image.jpg');
+background-repeat: no-repeat;
+    background-size: cover;
+
+    background-attachment: fixed;
+    background-position: center;
+    opacity: .8;
+    height: 100vh;
+}
 #reviewedHeader{
-    background-color: #fdec8e;
-    color: white;
+    background-color: #f2f2f2;
+    color: #beb6c4;
     margin: 0px;
     padding: 20px;
     font-family: 'Bungee Shade', cursive;
@@ -581,6 +614,9 @@
     overflow-y: scroll;
     justify-content: space-between;
     height: 100vh;
+    background-color: #f2f2f2;
+
+    /* background-color: #dacfda; */
 }
 
 #check {
@@ -602,6 +638,9 @@
     padding: 20px;
     font-weight: bolder;
     font-size: 20px;
+        background-color: #dacfda;
+
+    /* background-color: #f2f2f2; */
     border: 3px solid #a4a4a4;
     width: 264px;
     height: fit-content;

@@ -18,7 +18,7 @@ function FilterContainer({ spots, user}) {
    key={spot.id} spot_id={spot.id} name={spot.name} user={user} location={spot.location} category={spot.category} lat={spot.lat} lng={spot.lng} image={spot.image} /> )
  
    return (
-    <div>
+    <div id='filterContainer'>
         {filteredSpots}
     </div>
   )

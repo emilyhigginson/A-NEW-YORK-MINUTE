@@ -58,6 +58,8 @@ Spot.create(name: "Madison Square Park", image: "https://content.presspage.com/u
 Spot.create(name: "Brooklyn Bridge", image: "https://tallgirlbigworld.com/wp-content/uploads/2018/07/27345222718_6cb381b19d_o-1.jpg", location: "Manhattan", category: "Activity", free: true, lat: 40.706216037567046, lng: -73.99686404584286)
 Spot.create(name: "The High Line", image: "https://media.timeout.com/images/102540127/image.jpg", location: "Chelsea", category: "Activity", free: true, lat: 40.748000607367494, lng: -74.00471125835351)
 Spot.create(name: "Madison Square Garden", image: "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/12/14/16394607780028.jpg", location: "Midtown", category: "Activity", free: false, lat: 40.750618267436444, lng: -73.99334214301311)
+Spot.create(name: "Spin New York", image: "https://wearespin.com/wp-content/uploads/SPIN-New-York-Venue-20170614103831.jpg", location: "Midtown", category: "Late Night", free: false, lat: 40.76156616649707, lng: -73.97461694586708)
+
 Spot.create(name: "", image: "", location: "", category: "Food & Drink", free: false)
 
 

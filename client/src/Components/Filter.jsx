@@ -50,16 +50,19 @@ function Filter(
         }
 
   return (
-    <div>
-        <MyTimer/>
+    <div >
+       
         <div id= 'minuteDiv'>
-        <h1> Life moves fast. Why waste any time deciding what to do? <br></br> Tell us what you're looking for and we'll help you pick where to go. 
+        <h1 id ='minuteCaption'> Life moves fast. Why waste any time deciding what to do? <br></br> Tell us what you're looking for and we'll help you decide where to go faster than A New York Minute. 
         </h1>
-        <h1> Want to see all of your options?   <Link to = '/spots'> View all spots here </Link> </h1>
-        </div>
+        {/* <h1> Want to see all of your options?   <Link to = '/spots'> View all spots here </Link> </h1> */}
+        {/* </div> */}
+        <MyTimer/>
         <div id= 'filterDiv'>
         <form onSubmit={handleSubmit}>
+       
         <label>What are you looking for?</label>
+
         <Select 
         options={categoryOptions}
         placeholder="Down for Anything"
@@ -81,7 +84,8 @@ function Filter(
         />
         </form>
         </div>
-    </div>
+       </div>
+     </div>
   )
 }
 
