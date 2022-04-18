@@ -146,7 +146,7 @@ export default
         "elementType": "all",
         "stylers": [
             {
-                "color": "#13d1ff"
+                "color": "#9ec4ea"
             },
             {
                 "visibility": "on"

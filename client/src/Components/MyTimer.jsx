@@ -10,7 +10,7 @@ function MyTimer({ expiryTimestamp }) {
     pause,
     resume,
     restart,
-  } = useTimer({ expiryTimestamp, onExpire: () => alert('Your minute has passed! Time to make a decision.') });
+  } = useTimer({ expiryTimestamp, onExpire: () => alert('Your minute is up! Decide fast enough?') });
 
 
   return (
@@ -20,7 +20,7 @@ function MyTimer({ expiryTimestamp }) {
       <div style={{fontSize: '100px'}}>
         <span>{minutes}</span>:<span>{seconds}</span>
       </div>
-      <p>{isRunning ? 'Time is Ticking' : 'Decide Fast Enough?'}</p>
+      <p>{isRunning ? 'Time is Ticking' : 'Time is up!'}</p>
       {/* <button onClick={start}>Start</button>
       <button onClick={pause}>Pause</button>
       <button onClick={resume}>Resume</button> */}

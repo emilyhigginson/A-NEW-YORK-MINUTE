@@ -45,7 +45,7 @@ console.log()
 
     <div className='loginDiv'>
       <form onSubmit={handleSubmit}>
-      <h1>Welcome back, login below. New user? Signup.</h1>
+      <h1>Welcome back!<br></br>Login: </h1>
       <label> Email:
       <br></br>
         <input 

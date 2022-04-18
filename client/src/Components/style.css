@@ -91,6 +91,7 @@
     text-align: center;
     font-size: 70px;
     font-weight: bold;
+    margin: 0%;
 }
 
 .loginDiv {
@@ -129,8 +130,8 @@
 
 .search {
     position: absolute;
-    top: 50rem;
-    left: 50%;
+    top: 45rem;
+    left: 30%;
     transform: translateX(-50%);
     width: 100%;
     max-width: 400px;
@@ -174,10 +175,12 @@
     display: flex;
 }
 #newform{
+    text-align: center;
     justify-content: center;
     padding: 10px;
 display: flex;
 flex-direction: column;
+margin-left: 60px;
 }
 .spotPage {
     justify-content: center;

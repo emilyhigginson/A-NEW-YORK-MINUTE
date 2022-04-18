@@ -52,9 +52,9 @@ function Filter(
   return (
     <div>
         <MyTimer/>
-        <h1>What's the vibe? Tell us below and we'll help you pick where to go. 
+        <h1> Life moves fast. Why waste any time deciding what to do? Tell us what you're looking for and we'll help you pick where to go. 
         </h1>
-        <h1>In the mood to browse?   <Link to = '/spots'> View all spots </Link> </h1>
+        <h1> Want to see all of your options?   <Link to = '/spots'> View all spots here </Link> </h1>
         <form onSubmit={handleSubmit}>
         <label>What are you looking for?</label>
         <Select 
