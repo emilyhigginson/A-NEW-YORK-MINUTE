@@ -11,7 +11,7 @@ function SavedCard({ setReviews, handleDelete,favoriteId, handleFavoriteDelete, 
 console.log(favoriteId)
   return (
 
-    <div id='spotCard'>
+    <div id='savedSpotCard'>
       <div id='leftCard'>
         <h1 id='locationName'>{name}</h1>
         <img id="spotimage" style={{ "width": "500px" }} src={image} />

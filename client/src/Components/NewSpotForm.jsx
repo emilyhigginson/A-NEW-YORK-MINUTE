@@ -122,6 +122,7 @@ const priceOptions = [
         type="submit"
         name="submit"
         value="Join!"> 
+        
         <strong>Enter!</strong>
     </button>
       </form>

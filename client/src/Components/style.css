@@ -28,7 +28,7 @@
     justify-content: space-between;
     color: #9ec4ea;
     padding: 5px;
-    height: 10vh;
+    height: 8vh;
     z-index: 10;
 }
 
@@ -43,8 +43,11 @@
 
 #logout {
     border: none;
+    border-radius: 10px;
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
+    background-color: #9ec4ea;
+    color: white;
 }
 
 #link {
@@ -168,9 +171,9 @@
 }
 
 #searchBox {
-    margin-top: 100px;
+    margin-top: 250px;
     width: 80%;
-    background-color: whitesmoke;
+    background-color: #b4dec0;
     color: black;
     /* padding: 0px; */
     z-index: 10;
@@ -220,14 +223,14 @@
 #spotsHeader {
     padding: 20px;
     width: fit-content;
-    color: #12495a;
+    color: #6b3b1b;
     font-size: 60px;
     height: fit-content;
-    margin-top: 240px;
+    margin-top: 200px;
     margin-right: 1050px;
     font-weight: 40px;
     font-family: 'Bungee Shade', cursive;
-    background-color: #ccdfe9;
+    /* background-color: #fdd1bf; */
 
     
 
@@ -243,11 +246,18 @@
     text-align: center;
     justify-content: center;
     padding: 10px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     margin-left: 60px;
+    background-color: #96beea;
 }
-
+input{
+    height: 22px;
+    border-radius: 5px;
+    border: white;
+    /* width: max-content; */
+}
 .spotPage {
     justify-content: center;
     align-items: center;
@@ -257,7 +267,8 @@
     flex-wrap: wrap;
     text-align: center;
     padding: 70px;
-    background-image: url('https://pbs.twimg.com/media/D4ws96nWsAEJRXW?format=jpg&name=large');
+    /* background-image: url('https://pbs.twimg.com/media/D4ws96nWsAEJRXW?format=jpg&name=large'); */
+    background-image: url('https://i.pinimg.com/originals/62/36/4e/62364e02e24a7451929b48d5d4dc8313.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -301,6 +312,18 @@
     position: relative;
     display: flex;
     flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    max-width: fit-content;
+    height: fit-content;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #a4a4a4;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    /* position: relative;
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     max-width: 75%;
     height: fit-content;
@@ -308,7 +331,7 @@
     padding: 20px;
     /* border: 3px solid #a4a4a4; */
     border-radius: 10px;
-    background-color: #fdec8e;
+    /* background-color: #fdec8e;  */
 }
 #locationName {
     background-color: #f2f2f2;
@@ -388,7 +411,11 @@
     display: flex;
     flex-wrap: wrap;
     background-color: none;
+    font-size: 60px;
     margin: 0px;
+    padding-top: 40px;
+    font-weight: 40px;
+    font-family: 'Bungee Shade', cursive;
 }
 
 .homeContainer {
@@ -434,24 +461,24 @@
 
 #saveheader {
     font-size: 50px;
-    background-color: white;
+    /* background-color: white; */
     color: #9fc4e9;
     padding: 20px;
     width: fit-content;
-    color: #12495a;
+    color: white;
     font-size: 60px;
     /* margin-right: 1000px; */
     justify-content: left;
     display: flex;
     font-weight: 40px;
     font-family: 'Bungee Shade', cursive;
-    background-color: #ccdfe9;
+    /* background-color: #ccdfe9; */
 
 }
 
 #welcome {
     padding: 20px;
-    background-color: #dacfda;
+    /* background-color: #dacfda; */
     width: fit-content;
     /* text-align: center; */
     /* justify-content: center; */
@@ -482,8 +509,9 @@
 #searchHeader {
     display: flex;
     flex-direction: row;
-
-    background-image: url('https://cupofjo.com/wp-content/uploads/2011/09/how-to-flag-nyc-taxi-cab-photo.png');
+/* 
+    background-image: url('https://cupofjo.com/wp-content/uploads/2011/09/how-to-flag-nyc-taxi-cab-photo.png'); */
+background-image: none;
     background-repeat: no-repeat;
     background-size: cover;
 

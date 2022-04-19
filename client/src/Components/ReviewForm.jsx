@@ -41,11 +41,13 @@ function ReviewForm({reviews, setReviews, handleDelete, user, spot_id}) {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
         />
+        <br></br>
 
  <button onClick={handleDelete}
         type="submit"
         name="submit"
        > 
+
         <strong>Review</strong>
     </button>
         </form>

@@ -128,7 +128,7 @@ function Search({ panTo }) {
                         setValue(e.target.value);
                     }}
                     disabled={!ready}
-                    placeholder="Enter an address"
+                    placeholder="SEARCH BY NAME OR ADDRESS"
                 />
                 <ComboboxPopover>
                     {status === "OK" && data.map(({ id, description }) => <ComboboxOption key={id} value={description} />)}
