@@ -179,7 +179,28 @@
     z-index: 10;
     height: 40px;
 }
+#buttonDiv{
+/* justify-content: center; */
+justify-content: space-between;
+}
+.spotButton{
+padding: 10px;
+border-radius: 8px;
+border: 2px solid white;
+margin: 5px;
+color: white; 
+font-size: 16px;
+/* width: 250px; */
+background-color: #beb6c4;
 
+}
+button:hover{
+    cursor: pointer;
+
+}
+.spotButton:hover{
+    cursor: pointer
+}
 .search {
     position: absolute;
     top: 45rem;
@@ -525,9 +546,9 @@ background-image: none;
 }
 
 .button {
-    background-color: #fffc96;
+    background-color: #d4cdda;
     font-size: 20px;
-    border: none;
+    border: 1px, solid gray;
     border-radius: 10px;
     margin-right: 10px;
 
@@ -538,7 +559,7 @@ background-image: none;
     flex-direction: row;
     overflow-x: scroll;
     background-color: #f2f2f2;
-    height: 70vh;
+    height: 90vh;
 }
 
 #reviewsContainer {
@@ -584,7 +605,23 @@ background-repeat: no-repeat;
     font-family: 'Bungee Shade', cursive;
     font-size: 40px;
 }
+#reviewedSub{
+    margin-left: 40px;
+    background-color: #f2f2f2;
+}
+#savedSub{
+ background-color: #f2f2f2;
+ padding: 0;
+ margin: 0;
+ text-indent: 40px;
 
+}
+
+#visitedSub{
+    margin-left: 40px;
+    background-color: #f2f2f2;
+
+}
 #savedCategoryChild1 {
     padding: 10px;
     margin: 10px;
@@ -611,18 +648,18 @@ background-repeat: no-repeat;
 }
 
 #savedLocationName {
-    background-color:#fdec8e;
-    color: black;
-    position: absolute;
+    color: #a395ae;
+    font-weight: 500;
+    /* position: absolute; */
     text-transform: uppercase;
     /* top: 315px; */
     /* left: 0; */
     top: -5px;
     /* padding: 20px; */
     padding-right: 5px;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     padding-bottom: 5px;
-
+    font-size: 40px;
     font-weight: bolder;
     /* border: 2px solid black; */
     /* border-radius: 8px; */
@@ -631,10 +668,11 @@ background-repeat: no-repeat;
 
 #buttonDiv {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     margin-top: 20px;
     /* padding: 15px; */
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 
 #reviewContainer {

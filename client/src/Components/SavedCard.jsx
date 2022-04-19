@@ -13,7 +13,7 @@ console.log(favoriteId)
 
     <div id='savedSpotCard'>
       <div id='leftCard'>
-        <h1 id='locationName'>{name}</h1>
+        <h1 id='savedLocationName'>{name}</h1>
         <img id="spotimage" style={{ "width": "500px" }} src={image} />
         <h3 id="categoryChild1" >{category} </h3>
         <h3 id="categoryChild2"> {location} </h3>

@@ -45,13 +45,16 @@ setIsClicked((isClicked) => !isClicked)}
         <h3 id="categoryChild2"> 📍{location} </h3>
         <button id = 'saveButton' onClick={() => {setClicked(); handleClick()}}> 
         {/* user.spots.includes(spot) :  */}
-        {isClicked ?  "★" : "☆"}  </button>
+        {isClicked ?  "Saved ★" : "Save ☆"}  </button>
         </div>
     
       {/* <Review/>             */}
-        <button onClick={toggleReviewForm} > Write a Review </button>
+      <div id='buttonDiv'>
+        <button className='spotButton' onClick={toggleReviewForm} > Write a Review </button>
+        <button className='spotButton'  onClick={toggleReviews} > Show Reviews </button>
+        </div>
+
         {formIsShowing ? null : <ReviewForm spot_id={id} user={user}/>}
-        <button onClick={toggleReviews} > Show Reviews </button>
 
         {showReviews ? <Review reviews={reviews} id={id} /> : null}
         </div>

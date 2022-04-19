@@ -9,7 +9,8 @@ import ReviewedMap from './ReviewedMap'
     
       return (
         <div id="reviewsContainer" name="test2">
-          <h1 id="reviewedHeader"> Reviews you've written:  </h1>
+          <h1 id="reviewedHeader"> Where you've been & what you've thought:  </h1>
+          <h2 id="reviewedSub"> Here are all of the places you've been! Once you write a review, it is added here. </h2>
           {/* {reviewedSpots} */}
           <div id='reviewContainer'>
           {myReviews}

@@ -38,6 +38,7 @@ const favs = mySaved.map((spot) => <SavedCard setReviews={setReviews} onReviewSu
   return (
     <div name="test1">
     <h1 id= 'savedHeader'> Spots you've saved:</h1>
+    <h2 id='savedSub' >Once you've visited a saved spot, write a review to add it to your visited list.</h2>
     <div className='savedContainer'>
 {favs} 
 </div>
