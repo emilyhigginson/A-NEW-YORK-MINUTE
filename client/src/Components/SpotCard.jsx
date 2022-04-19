@@ -53,10 +53,11 @@ setIsClicked((isClicked) => !isClicked)}
         <button className='spotButton' onClick={toggleReviewForm} > Write a Review </button>
         <button className='spotButton'  onClick={toggleReviews} > Show Reviews </button>
         </div>
-
+      <div id= "reviewContent">
         {formIsShowing ? null : <ReviewForm spot_id={id} user={user}/>}
 
         {showReviews ? <Review reviews={reviews} id={id} /> : null}
+        </div>
         </div>
         <div id= "filterMap">
           

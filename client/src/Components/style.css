@@ -27,9 +27,10 @@
     flex-direction: row;
     justify-content: space-between;
     color: #9ec4ea;
-    padding: 5px;
-    height: 8vh;
-    z-index: 10;
+    /* padding: 5px; */
+    height: 12vh;
+    background-color: white;
+    /* z-index: 10; */
 }
 
 #links {
@@ -39,6 +40,7 @@
     text-decoration: none;
     background: rgba(255, 255, 255, 0.9);
     z-index: 10;
+    
 }
 
 #logout {
@@ -167,7 +169,8 @@
 }
 
 #leftCard {
-    width: 540px;
+    /* width: 540px; */
+    width: fit-content
 }
 
 #searchBox {
@@ -239,28 +242,32 @@ button:hover{
     justify-content: center;
     display: flex;
     text-align: center;
-
+    opacity: .9;
 
 }
 
 #spotsHeader {
     padding: 20px;
     width: fit-content;
-    color: #6b3b1b;
+    color: #423a32;
     font-size: 60px;
     height: fit-content;
     margin-top: 200px;
     margin-right: 1050px;
     font-weight: 40px;
     font-family: 'Bungee Shade', cursive;
-    /* background-color: #fdd1bf; */
-
-    
-
-    /* font-family: 'Bungee Shade', cursive; */
 
 }
 
+#reviewContent{
+    font-size: 22px;
+    /* background-color: white; */
+    padding: 5px;
+
+}
+li{
+    padding: 2px;
+}
 #newspotcontainer {
     display: flex;
 }
