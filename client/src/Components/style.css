@@ -171,9 +171,11 @@
 }
 
 #searchBox {
-    margin-top: 250px;
+    margin-top: 350px;
+    position: fixed;
     width: 80%;
-    background-color: #b4dec0;
+    background-color: #c4c5d3;
+    border: 2px solid white;
     color: black;
     /* padding: 0px; */
     z-index: 10;
@@ -267,11 +269,13 @@ button:hover{
     text-align: center;
     justify-content: center;
     padding: 10px;
+    margin: 60px;
+    border: 1px solid #7e6e68;
     font-size: 20px;
     display: flex;
     flex-direction: column;
     margin-left: 60px;
-    background-color: #96beea;
+    background-color: #c4c5d3;
 }
 input{
     height: 22px;

@@ -53,7 +53,7 @@ function Filter(
     <div >
        
         <div id= 'minuteDiv'>
-        <h1 id ='minuteCaption'> Life moves fast. Why waste any time deciding what to do? <br></br> Tell us what you're looking for and we'll help you decide where to go faster than A New York Minute. 
+        <h1 id ='minuteCaption'> Life moves fast. Why waste any time deciding what to do? <br></br> Tell us what you're looking for and we'll help you decide where to go faster than <br></br> A New York Minute. 
         </h1>
         {/* <h1> Want to see all of your options?   <Link to = '/spots'> View all spots here </Link> </h1> */}
         {/* </div> */}

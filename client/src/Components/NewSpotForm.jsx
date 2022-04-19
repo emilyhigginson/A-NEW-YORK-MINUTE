@@ -64,6 +64,7 @@ const priceOptions = [
       <Map setLng={setLng} setLat={setLat} />
      </div>
       <form id='newform' onSubmit={handleSubmit}>
+        <h3>Tell us all about it:</h3>
         <label> Name: </label>
         <input
           type="text"
@@ -117,7 +118,8 @@ const priceOptions = [
           value={lng}>
 
         </input>
-        <ReviewForm/>
+        {/* <ReviewForm/> */}
+        <br></br>
         <button 
         type="submit"
         name="submit"
