@@ -5,20 +5,6 @@
 
 * {
     font-family: 'Montserrat', sans-serif, 'Kalam';
-    /* color: black; */
-    /* #a3d0f4 cool blue */
-    /*     
-   light blue - #6cbeed
-    gray - #a4a4a4
-    tan - #a78667
-    yellow- #fca922
-    orange- #d04d23
-    burnt orange- #9c4532
-    green- #263d04
-    brown- #693012
-    red- #7c0003
-    */
-
 }
 
 .navbar {
@@ -27,10 +13,8 @@
     flex-direction: row;
     justify-content: space-between;
     color: #9ec4ea;
-    /* padding: 5px; */
     height: 12vh;
     background-color: white;
-    /* z-index: 10; */
 }
 
 #links {
@@ -40,7 +24,6 @@
     text-decoration: none;
     background: rgba(255, 255, 255, 0.9);
     z-index: 10;
-    
 }
 
 #logout {
@@ -53,13 +36,11 @@
 }
 
 #link {
-    /* padding-bottom: 20px; */
     color: #9ec4ea;
     text-decoration: none;
     align-content: right;
     padding-top: 30px;
     padding-left: 10px;
-    /* z-index: 10; */
 }
 
 #links:visited {
@@ -72,7 +53,6 @@
 }
 
 .loginPage {
-    /* background-image: url("https://wallpaperbat.com/img/81402-other-new-york-city-black-white-photography-wallpaper-picture-hd.jpg"); */
     background-image: url('https://www.carlylepropertymanagement.com/wp-content/uploads/2021/02/Depositphotos_11683989_s-2019.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -81,13 +61,10 @@
     opacity: .9;
     z-index: 10;
     top: 20%;
-
 }
 
 .homepage {
-    /* background-image: url("https://wallpaperbat.com/img/81402-other-new-york-city-black-white-photography-wallpaper-picture-hd.jpg"); */
     background-image: url('https://www.carlylepropertymanagement.com/wp-content/uploads/2021/02/Depositphotos_11683989_s-2019.jpg');
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,17 +84,14 @@
 #minuteDiv {
     text-align: center;
     align-items: center;
-    /* padding-left: 100px; */
     margin-left: 100px;
     margin-right: 100px;
-
     justify-content: center;
 }
 
 #filterDiv {
     text-align: center;
     align-items: center;
-    /* padding-left: 100px; */
     margin-left: 100px;
     margin-right: 100px;
     justify-content: center;
@@ -126,9 +100,11 @@
     padding: 10px;
     font-size: 20px;
 }
-#timer{
+
+#timer {
     color: white
 }
+
 #filterButton {
     justify-content: center;
     text-align: center;
@@ -158,18 +134,15 @@
     padding: 15px;
     border-radius: 10%;
     background: rgba(255, 255, 255, 0.9);
-    /* opacity: 0.8; */
     color: #d04d23;
 }
 
 #reviewComment {
     font-size: 16px;
     font-weight: 200;
-
 }
 
 #leftCard {
-    /* width: 540px; */
     width: fit-content
 }
 
@@ -180,32 +153,34 @@
     background-color: #c4c5d3;
     border: 2px solid white;
     color: black;
-    /* padding: 0px; */
     z-index: 10;
     height: 40px;
 }
-#buttonDiv{
-/* justify-content: center; */
-justify-content: space-between;
+
+#buttonDiv {
+    justify-content: space-between;
 }
-.spotButton{
-padding: 10px;
-border-radius: 8px;
-border: 2px solid white;
-margin: 5px;
-color: white; 
-font-size: 16px;
-/* width: 250px; */
-background-color: #beb6c4;
+
+.spotButton {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid white;
+    margin: 5px;
+    color: white;
+    font-size: 16px;
+    background-color: #beb6c4;
 
 }
-button:hover{
+
+button:hover {
     cursor: pointer;
 
 }
-.spotButton:hover{
+
+.spotButton:hover {
     cursor: pointer
 }
+
 .search {
     position: absolute;
     top: 45rem;
@@ -214,7 +189,6 @@ button:hover{
     width: 100%;
     max-width: 400px;
     z-index: 10;
-
 }
 
 .mapHeader {
@@ -226,16 +200,13 @@ button:hover{
 
 .allSpots {
     background-color: #ccdfe9;
-
 }
 
 .allSpotsHeader {
     background-image: url('https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8&w=1000&q=80');
     background-repeat: no-repeat;
     background-size: cover;
-    /* opacity: .8; */
     font-family: 'Bungee Shade', cursive;
-
     background-attachment: fixed;
     background-position: center;
     height: 80vh;
@@ -243,11 +214,12 @@ button:hover{
     display: flex;
     text-align: center;
     opacity: .9;
-
 }
-#reviewedImg{
+
+#reviewedImg {
     max-width: 10vw;
 }
+
 #spotsHeader {
     padding: 20px;
     width: fit-content;
@@ -258,18 +230,17 @@ button:hover{
     margin-right: 1050px;
     font-weight: 40px;
     font-family: 'Bungee Shade', cursive;
-
 }
 
-#reviewContent{
+#reviewContent {
     font-size: 22px;
-    /* background-color: white; */
     padding: 5px;
-
 }
-li{
+
+li {
     padding: 2px;
 }
+
 #newspotcontainer {
     display: flex;
 }
@@ -286,12 +257,13 @@ li{
     margin-left: 60px;
     background-color: #c4c5d3;
 }
-input{
+
+input {
     height: 22px;
     border-radius: 5px;
     border: white;
-    /* width: max-content; */
 }
+
 .spotPage {
     justify-content: center;
     align-items: center;
@@ -301,12 +273,10 @@ input{
     flex-wrap: wrap;
     text-align: center;
     padding: 70px;
-    /* background-image: url('https://pbs.twimg.com/media/D4ws96nWsAEJRXW?format=jpg&name=large'); */
     background-image: url('https://i.pinimg.com/originals/62/36/4e/62364e02e24a7451929b48d5d4dc8313.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -316,13 +286,10 @@ input{
     display: flex;
     text-align: center;
     color: white;
-
-    /* background-color: #fffec6; */
 }
 
 #newspotSearchbar {
     position: absolute;
-
     margin-top: 180px;
     margin-right: 750px;
 }
@@ -339,10 +306,9 @@ input{
     border: 3px solid #a4a4a4;
     border-radius: 10px;
     background-color: #f2f2f2;
-    /* background-color: #f2f2f2; */
-
 }
-#savedSpotCard{
+
+#savedSpotCard {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -355,30 +321,17 @@ input{
     border: 3px solid #a4a4a4;
     border-radius: 10px;
     background-color: #f2f2f2;
-    /* position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    max-width: 75%;
-    height: fit-content;
-    margin: 20px;
-    padding: 20px;
-    /* border: 3px solid #a4a4a4; */
     border-radius: 10px;
-    /* background-color: #fdec8e;  */
 }
+
 #locationName {
     background-color: #f2f2f2;
     color: #fabdb3;
     position: absolute;
     text-transform: uppercase;
     top: 315px;
-    /* left: 0; */
     padding: 20px;
     font-weight: bolder;
-    /* border: 2px solid black; */
-    /* border-radius: 8px; */
-
 }
 
 #spotimage {
@@ -411,8 +364,6 @@ input{
     border-radius: 10px;
     font-size: 20px;
     font-weight: 400;
-
-
 }
 
 #categoryChild3 {
@@ -423,8 +374,6 @@ input{
     border: none;
     font-size: 20px;
     font-weight: 300;
-
-
 }
 
 #saveButton {
@@ -434,7 +383,6 @@ input{
     background-color: #fffc96;
     border-radius: 10px;
     border: none;
-
     font-size: 20px;
     font-weight: 400;
 }
@@ -468,7 +416,6 @@ input{
     font-size: 22px;
     height: 450px;
     width: 400px;
-
 }
 
 .homeDiv {
@@ -495,27 +442,20 @@ input{
 
 #saveheader {
     font-size: 50px;
-    /* background-color: white; */
     color: #9fc4e9;
     padding: 20px;
     width: fit-content;
     color: white;
     font-size: 60px;
-    /* margin-right: 1000px; */
     justify-content: left;
     display: flex;
     font-weight: 40px;
     font-family: 'Bungee Shade', cursive;
-    /* background-color: #ccdfe9; */
-
 }
 
 #welcome {
     padding: 20px;
-    /* background-color: #dacfda; */
     width: fit-content;
-    /* text-align: center; */
-    /* justify-content: center; */
     align-items: center;
     display: flex;
     font-size: 60px;
@@ -524,7 +464,6 @@ input{
 }
 
 #profileHeader {
-    /* display: flex; */
     flex-direction: column;
     background-image: url('https://www.teahub.io/photos/full/0-3993_new-york-computer-backgrounds.jpg');
     background-repeat: no-repeat;
@@ -532,23 +471,18 @@ input{
     background-attachment: fixed;
     background-position: center;
     height: 80vh;
-    /* width: 100vw; */
     justify-content: center;
     display: flex;
     text-align: center;
     color: white;
-
 }
 
 #searchHeader {
     display: flex;
     flex-direction: row;
-/* 
-    background-image: url('https://cupofjo.com/wp-content/uploads/2011/09/how-to-flag-nyc-taxi-cab-photo.png'); */
-background-image: none;
+    background-image: none;
     background-repeat: no-repeat;
     background-size: cover;
-
     background-attachment: fixed;
     background-position: center;
     height: 80vh;
@@ -564,7 +498,6 @@ background-image: none;
     border: 1px, solid gray;
     border-radius: 10px;
     margin-right: 10px;
-
 }
 
 .savedContainer {
@@ -576,9 +509,7 @@ background-image: none;
 }
 
 #reviewsContainer {
-    /* height: 90vh; */
     background-color: #f2f2f2
-
 }
 
 #savedHeader {
@@ -588,29 +519,28 @@ background-image: none;
     padding: 20px;
     font-family: 'Bungee Shade', cursive;
     font-size: 40px;
-
-
 }
-#minuteCaption{
+
+#minuteCaption {
     font-size: 40px;
     padding-top: 30px;
-    /* background-color: #fce2d3; */
-    
 }
-#filterContainer{
+
+#filterContainer {
     background-color: #f1d4ba;
 }
-.filterPage{
-background-image: url('https://media.timeout.com/images/101705309/image.jpg');
-background-repeat: no-repeat;
-    background-size: cover;
 
+.filterPage {
+    background-image: url('https://media.timeout.com/images/101705309/image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     opacity: .8;
     height: 100vh;
 }
-#reviewedHeader{
+
+#reviewedHeader {
     background-color: #f2f2f2;
     color: #beb6c4;
     margin: 0px;
@@ -618,23 +548,24 @@ background-repeat: no-repeat;
     font-family: 'Bungee Shade', cursive;
     font-size: 40px;
 }
-#reviewedSub{
+
+#reviewedSub {
     margin-left: 40px;
     background-color: #f2f2f2;
 }
-#savedSub{
- background-color: #f2f2f2;
- padding: 0;
- margin: 0;
- text-indent: 40px;
 
+#savedSub {
+    background-color: #f2f2f2;
+    padding: 0;
+    margin: 0;
+    text-indent: 40px;
 }
 
-#visitedSub{
+#visitedSub {
     margin-left: 40px;
     background-color: #f2f2f2;
-
 }
+
 #savedCategoryChild1 {
     padding: 10px;
     margin: 10px;
@@ -645,7 +576,6 @@ background-repeat: no-repeat;
     font-weight: 300;
     position: absolute;
     top: 337px;
-
 }
 
 #savedCategoryChild2 {
@@ -663,20 +593,12 @@ background-repeat: no-repeat;
 #savedLocationName {
     color: #a395ae;
     font-weight: 500;
-    /* position: absolute; */
     text-transform: uppercase;
-    /* top: 315px; */
-    /* left: 0; */
     top: -5px;
-    /* padding: 20px; */
     padding-right: 5px;
-    /* padding-top: 10px; */
     padding-bottom: 5px;
     font-size: 40px;
     font-weight: bolder;
-    /* border: 2px solid black; */
-    /* border-radius: 8px; */
-
 }
 
 #buttonDiv {
@@ -684,15 +606,9 @@ background-repeat: no-repeat;
     justify-content: center;
     flex-direction: row;
     margin-top: 20px;
-    /* padding: 15px; */
-    /* padding-right: 20px; */
 }
 
 #reviewContainer {
-    /* display: flex;
-    overflow-y: scroll;
-    justify-content: space-between;
-    height: 100vh; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -701,21 +617,6 @@ background-repeat: no-repeat;
     align-content: space-around;
     grid-area: 3 / 1 / 13 / 5;
     background-color: #f2f2f2;
-
-    /* background-color: #dacfda; */
-}
-
-#check {
-
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-content: space-around; */
-  
-    /* background-image: url('https://i.pinimg.com/originals/0a/60/1b/0a601bb8d8714df9a246c05e4b98fdd5.jpg');
-    opacity: .8;
-    height: 470px;
-    width: 250px;
-    margin: 10px; */
 }
 
 #checkContent {
@@ -724,13 +625,9 @@ background-repeat: no-repeat;
     padding: 20px;
     font-weight: bolder;
     font-size: 20px;
-        background-color: #dacfda;
-
-    /* background-color: #f2f2f2; */
+    background-color: #dacfda;
     border: 3px solid #a4a4a4;
     width: 264px;
     height: fit-content;
     margin: 20px;
-    
-        /* z-index: 10; */
 }

@@ -1,6 +1,6 @@
 import { useLoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api'
 
-import React, {useState}  from 'react';
+import React, { useState } from 'react';
 import "@reach/combobox/styles.css"
 import mapstyles from './mapstyles';
 
@@ -18,8 +18,8 @@ const options = {
 
 // const MY_KEY = "AIzaSyAK_6JoeZNYhqwGPwLNmmqImmiWzl4lM8E"
 
-export default function Map({ lat, lng , name}) {
-const [selected, setSelected] = useState(null);
+export default function Map({ lat, lng, name }) {
+    const [selected, setSelected] = useState(null);
 
     const center = {
         lat: lat,
@@ -30,7 +30,7 @@ const [selected, setSelected] = useState(null);
         libraries,
 
     });
-// const image = './marker.png'
+    // const image = './marker.png'
     const mapRef = React.useRef();
     const onMapLoad = React.useCallback((map) => {
         mapRef.current = map;
@@ -47,18 +47,18 @@ const [selected, setSelected] = useState(null);
                     onLoad={onMapLoad}
                     options={options}
                 >
-                    <Marker key={lat} position={center} 
-                    // icon={image}
-                    
-                   
-                      onClick = { () => { setSelected(center)}}
-                      
+                    <Marker key={lat} position={center}
+                        // icon={image}
+
+
+                        onClick={() => { setSelected(center) }}
+
                     />
-                   { selected ? <InfoWindow position={{lat: selected.lat, lng: selected.lng}}> 
-                       <div>
-                           <p>{name}</p>
-                       </div>
-                   </InfoWindow> : null}
+                    {selected ? <InfoWindow position={{ lat: selected.lat, lng: selected.lng }}>
+                        <div>
+                            <p>{name}</p>
+                        </div>
+                    </InfoWindow> : null}
                 </GoogleMap>
             </div>
 

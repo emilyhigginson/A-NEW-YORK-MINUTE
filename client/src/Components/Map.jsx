@@ -1,10 +1,5 @@
 import { useLoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps/api'
-
-import React, {useState} from 'react';
-import Select from 'react-select'
-import ReviewForm from './ReviewForm'
-import NewSpotForm from './NewSpotForm';
-import { formatRelative } from "date-fns"
+import React, { useState } from 'react';
 import usePlacesAutocomplete, {
     getGeocode,
     getLatLng,
@@ -38,12 +33,11 @@ const options = {
 
 // const MY_KEY = "AIzaSyAK_6JoeZNYhqwGPwLNmmqImmiWzl4lM8E"
 
-export default function Map({setLat, setLng, lat, lng}) {
+export default function Map({ setLat, setLng, lat, lng }) {
 
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey : "AIzaSyAK_6JoeZNYhqwGPwLNmmqImmiWzl4lM8E",
+        googleMapsApiKey: "AIzaSyAK_6JoeZNYhqwGPwLNmmqImmiWzl4lM8E",
         libraries,
-        
     });
 
     const mapRef = React.useRef();
@@ -59,38 +53,36 @@ export default function Map({setLat, setLng, lat, lng}) {
         mapRef.current.setZoom(20);
     }, []);
 
-
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading maps";
     return (
         <>
-        <div id= 'mapbox'>
-            <br></br>
+            <div id='mapbox'>
+                <br></br>
 
+                <GoogleMap mapContainerStyle={mapContainerStyle}
+                    zoom={14}
+                    center={center}
+                    onLoad={onMapLoad}
+                    options={options}
+                    onClick={(event) => {
+                        setMarkers(current => [{
+                            lat: event.latLng.lat(),
+                            lng: event.latLng.lng(),
+                        }]);
+                        setLat(event.latLng.lat());
+                        setLng(event.latLng.lng())
+                    }
+                        // onClick={() => {setIsClicked(); handleClick()}}
+                    }
+                >
+                    {markers.map(marker => <Marker key={marker.lat} position={{ lat: marker.lat, lng: marker.lng }} />)}
+                    {/* options={options}  */}
+                </GoogleMap>
+                <Search style={{ top: '300px' }} panTo={panTo} />
 
-            <GoogleMap mapContainerStyle={mapContainerStyle}
-                zoom={14}
-                center={center}
-                onLoad={onMapLoad}
-                options={options}
-                onClick={(event) => {
-                    setMarkers(current => [ {
-                        lat: event.latLng.lat(), 
-                        lng: event.latLng.lng(),
-                    }] ); 
-                    setLat(event.latLng.lat());
-                    setLng(event.latLng.lng())
-                }
-            // onClick={() => {setIsClicked(); handleClick()}}
-            }
-            >
-                {markers.map(marker => <Marker key={marker.lat} position={{lat: marker.lat, lng: marker.lng}}/>)}
-                {/* options={options}  */}
-            </GoogleMap>
-            <Search style={{top: '300px'}} panTo={panTo} />
+            </div>
 
-        </div>
-        
         </>
     )
 }
@@ -122,7 +114,7 @@ function Search({ panTo }) {
             >
 
                 <ComboboxInput
-                id='searchBox'
+                    id='searchBox'
                     value={value}
                     onChange={(e) => {
                         setValue(e.target.value);
@@ -137,5 +129,4 @@ function Search({ panTo }) {
 
         </div>
     )
-                }
-    
+}

@@ -1,12 +1,7 @@
 import React from 'react'
-import ReviewedMap from './ReviewedMap'
 
   function VisitedSpots({ myReviews, user}) {
   
-    // const reviewedSpots = (user.spots)
-    // console.log(reviewedSpots)
-    console.log(myReviews)
-    
       return (
         <div id="reviewsContainer" name="test2">
           <h1 id="reviewedHeader"> Where you've been & what you've thought:  </h1>
