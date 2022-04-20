@@ -17,4 +17,8 @@ class Review < ApplicationRecord
       def longitude 
         self.spot.lng
       end
+
+      def photo 
+        self.spot.image
+      end
 end

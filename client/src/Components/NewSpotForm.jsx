@@ -33,18 +33,27 @@ function NewSpotForm({onFormSubmit}) {
   const categoryOptions = [
     { value: "Food & Drink", label: "Food & Drink" },
     { value: "Activity", label: "Activity" },
-    { value: "Fitness", label: "Fitness" },
-    { value: "Touristy", label: "Touristy" }
+    { value: "Late Night", label: "Late Night" },
   ];
 
 const locationOptions = [
-    { value: "Chelsea", label: "Chelsea"},
-    {value: "East Village", label: "East Village"},
-    {value: "Flatiron", label: "Flatiron"},
-    {value: "Gramercy", label: "Gramercy"},
-    {value: "Midtown", label: "Midtown"},
-    {value: "Times Square", label: "Times Square"},
-    {value: "West Village", label: "West Village"}
+  {value: "Central Park", label: "Central Park"},
+  {value: "Chelsea", label: "Chelsea"},
+  {value: "East Village", label: "East Village"},
+  {value: "Flatiron", label: "Flatiron"},
+  {value: "Gramercy", label: "Gramercy"},
+  {value: "Greenwich Village", label: "Greenwich Village"},
+  {value: "Kips Bay", label: "Kips Bay"},
+  {value: "LES", label: "Lower East Side"},
+  {value: "Midtown", label: "Midtown"},
+  {value: "Noho", label: "Noho"},
+  {value: "Nolita", label: "Nolita"},
+  {value: "Soho", label: "Soho"},
+  {value: "The Bowery", label: "The Bowery"},
+  {value: "Times Square", label: "Times Square"},
+  {value: "Union Square", label: "Union Square"},
+  {value: "Upper West Side", label: "Upper West Side"},
+  {value: "West Village", label: "West Village"}
 ]
 
 const priceOptions = [

@@ -7,25 +7,28 @@ function Filter(
   {setCategoryInput, setLocationInput, setFreeInput, handleSubmit}) {
 
     const categoryOptions = [
-        { value: "Down for Anything", label: "Down for Anything" },
         { value: "Food & Drink", label: "Food & Drink" },
         { value: "Activity", label: "Activity" },
         { value: "Late Night", label: "Late Night" }
       ];
 
     const locationOptions = [
-        {value: "All", label: "Anywhere & Everywhere"},
-        { value: "Chelsea", label: "Chelsea"},
+        {value: "Central Park", label: "Central Park"},
+        {value: "Chelsea", label: "Chelsea"},
         {value: "East Village", label: "East Village"},
         {value: "Flatiron", label: "Flatiron"},
         {value: "Gramercy", label: "Gramercy"},
+        {value: "Greenwich Village", label: "Greenwich Village"},
         {value: "Kips Bay", label: "Kips Bay"},
-        {value: "Lower East Side", label: "Lower East Side"},
+        {value: "LES", label: "Lower East Side"},
         {value: "Midtown", label: "Midtown"},
+        {value: "Noho", label: "Noho"},
         {value: "Nolita", label: "Nolita"},
+        {value: "Soho", label: "Soho"},
+        {value: "The Bowery", label: "The Bowery"},
         {value: "Times Square", label: "Times Square"},
         {value: "Union Square", label: "Union Square"},
-
+        {value: "Upper West Side", label: "Upper West Side"},
         {value: "West Village", label: "West Village"}
     ]
 

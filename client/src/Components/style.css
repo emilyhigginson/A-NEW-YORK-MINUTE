@@ -245,7 +245,9 @@ button:hover{
     opacity: .9;
 
 }
-
+#reviewedImg{
+    max-width: 10vw;
+}
 #spotsHeader {
     padding: 20px;
     width: fit-content;

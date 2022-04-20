@@ -32,7 +32,7 @@ console.log(reviews)
 
   const myReviews= reviews.map(review => {
     if(review.user_id === user.id) {
-    return <GuestCheck comment = {review.comment} name = {review.spot_name} > </GuestCheck> 
+    return <GuestCheck comment = {review.comment} name = {review.spot_name} img= {review.photo} > </GuestCheck> 
   }
   else {
       return null
