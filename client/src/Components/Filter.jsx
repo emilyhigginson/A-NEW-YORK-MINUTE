@@ -19,6 +19,7 @@ function Filter(
     { value: "Flatiron", label: "Flatiron" },
     { value: "Gramercy", label: "Gramercy" },
     { value: "Greenwich Village", label: "Greenwich Village" },
+    { value: "Hudson Square", label: "Hudson Square"},
     { value: "Kips Bay", label: "Kips Bay" },
     { value: "LES", label: "Lower East Side" },
     { value: "Midtown", label: "Midtown" },
