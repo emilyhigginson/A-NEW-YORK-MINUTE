@@ -15,7 +15,7 @@ function FilterContainer({ spots, user }) {
   const filteredSpots = spots.map(spot =>
     <SpotCard
       reviews={spot.reviews}
-      key={spot.id} spot_id={spot.id} name={spot.name} user={user} location={spot.location} category={spot.category} lat={spot.lat} lng={spot.lng} image={spot.image} />)
+      key={spot.id} id={spot.id} name={spot.name} user={user} location={spot.location} category={spot.category} lat={spot.lat} lng={spot.lng} image={spot.image} />)
 
   return (
     <div id='filterContainer'>
