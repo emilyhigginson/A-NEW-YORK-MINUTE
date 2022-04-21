@@ -3,6 +3,17 @@ import { useLoadScript, GoogleMap, Marker, InfoWindow } from '@react-google-maps
 import React, { useState } from 'react';
 import "@reach/combobox/styles.css"
 import mapstyles from './mapstyles';
+import {
+    Combobox,
+    ComboboxInput,
+    ComboboxPopover,
+    ComboboxList,
+    ComboboxOption,
+} from "@reach/combobox";
+import usePlacesAutocomplete, {
+    getGeocode,
+    getLatLng,
+} from "use-places-autocomplete";
 
 const libraries = ["places"]
 
@@ -35,6 +46,12 @@ export default function Map({ lat, lng, name }) {
     const onMapLoad = React.useCallback((map) => {
         mapRef.current = map;
     }, [])
+    const panTo = React.useCallback(({ lat, lng }) => {
+        console.log(lat, lng)
+        mapRef.current.panTo({ lat, lng });
+        mapRef.current.setZoom(20);
+    }, []);
+
     if (loadError) return "Error loading maps";
     if (!isLoaded) return "Loading maps";
 
