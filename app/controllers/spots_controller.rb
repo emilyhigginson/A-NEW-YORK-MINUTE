@@ -25,6 +25,6 @@ class SpotsController < ApplicationController
     private 
 
     def spot_params
-        params.permit(:name, :location, :category, :image, :review)
+        params.permit(:name, :location, :category, :image,  :free, :lat, :lng)
     end
 end

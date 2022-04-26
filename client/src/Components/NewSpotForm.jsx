@@ -8,13 +8,17 @@ function NewSpotForm({ onFormSubmit }) {
   const [image, setImage] = useState("")
   const [location, setLocation] = useState("")
   const [category, setCategory] = useState("")
-  const [price, setPrice] = useState("")
+  const [free, setFree] = useState(true)
   const [lat, setLat] = useState("")
   const [lng, setLng] = useState("")
+  const [reviews, setReviews] = useState([])
 
+  function handleLatChange(e){
+    setLat({value: e.target.value})
+  }
   function handleSubmit(event) {
     const newSpot = {
-      name, image, location, category, price
+      name, image, location, category, free, lat, lng, reviews
     }
     event.preventDefault();
     fetch("/spots", {
@@ -26,6 +30,7 @@ function NewSpotForm({ onFormSubmit }) {
     })
       .then((response) => response.json())
       .then(item => console.log(item))
+      .then(data => console.log(data))
       .then((data) => onFormSubmit(data));
   }
 
@@ -110,7 +115,7 @@ function NewSpotForm({ onFormSubmit }) {
           <Select
             options={priceOptions}
             placeholder="Name a price"
-            onChange={(e) => setPrice(e.value)}
+            onChange={(e) => setFree(e.value)}
           />
 
           <p>Find your spot on the map & click to add its coordinates </p>
@@ -118,13 +123,15 @@ function NewSpotForm({ onFormSubmit }) {
           <input
             type="text"
             name="name"
-            value={lat}>
+            value={lat}
+            onChange={event => handleLatChange(event)}>
           </input>
           <label>Longitude:</label>
           <input
             type="text"
             name="name"
-            value={lng}>
+            value={lng}
+            onChange={(e) => setLng(e.value)}>
 
           </input>
           {/* <ReviewForm/> */}
